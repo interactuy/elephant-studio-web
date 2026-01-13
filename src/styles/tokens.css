@@ -1,24 +1,67 @@
+/* =========================================================
+   ELEPHANT STUDIO — DESIGN TOKENS
+   ========================================================= */
+
+/* ---------------------------
+   LIGHT MODE (default)
+---------------------------- */
 :root {
-  --bg: #ffffff;
-  --text: #0f172a;     /* slate-900 */
-  --muted: #475569;    /* slate-600 */
-  --border: #e2e8f0;   /* slate-200 */
-  --surface: #f8fafc;  /* slate-50 */
-  --accent: #1f6ae1;   /* azul técnico sobrio */
+  /* Brand palette */
+  --blue-deep: #083344;
+  --green-deep: #06211a;
+  --gray-struct: #374151;
+  --cream: #f9f8f6;
+  --accent-warm: #f5a623;
+
+  /* UI */
+  --bg: var(--cream);
+  --text: #0f172a;
+  --muted: #475569;
+  --border: #e2e8f0;
+  --surface: #f8fafc;
+
+  --accent: var(--blue-deep);
 
   --radius: 16px;
   --container: 1120px;
 
   --shadow-sm: 0 1px 2px rgba(15, 23, 42, 0.06);
+
+   /* =========================
+     HERO — LIGHT (Radiant-like, Elephant)
+     ========================= */
+  --hero-base: #fbfaf8;
+
+--hero-aurora-1: rgba(8, 51, 68, 0.32);
+--hero-aurora-2: rgba(6, 33, 26, 0.18);
+--hero-aurora-3: rgba(55, 65, 81, 0.12);
+
+--hero-warm: rgba(245, 166, 35, 0.12);
+--hero-grid: rgba(15, 23, 42, 0.018);
+
 }
 
+/* ---------------------------
+   DARK MODE
+---------------------------- */
 [data-theme="dark"] {
   --bg: #070a12;
   --text: #e5e7eb;
   --muted: #9ca3af;
   --border: rgba(255, 255, 255, 0.12);
   --surface: rgba(255, 255, 255, 0.04);
+
   --accent: #76a7ff;
 
   --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.4);
+
+  /* HERO — DARK */
+  --hero-base: #070a12;
+
+  --hero-aurora-1: rgba(118, 167, 255, 0.16);
+  --hero-aurora-2: rgba(8, 51, 68, 0.22);
+  --hero-aurora-3: rgba(55, 65, 81, 0.12);
+  --hero-warm: rgba(245, 166, 35, 0.05);
+
+  --hero-grid: rgba(255, 255, 255, 0.06);
 }

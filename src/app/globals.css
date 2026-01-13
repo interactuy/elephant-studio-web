@@ -1,30 +1,9 @@
-@import "../styles/tokens.css";
 @import "tailwindcss";
+@import "../styles/tokens.css";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
-}
+/* =========================================================
+   BASE RESET + GLOBALS
+   ========================================================= */
 
 :root {
   color-scheme: light;
@@ -34,78 +13,225 @@ body {
   color-scheme: dark;
 }
 
-html, body {
+html,
+body {
   height: 100%;
 }
 
 body {
+  margin: 0;
   background: var(--bg);
   color: var(--text);
-  font-family: var(--font-dm), system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  font-family: var(--font-dm), system-ui, -apple-system, Segoe UI, Roboto, Arial,
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
 }
 
-h1, h2, h3, nav a, button {
-  font-family: var(--font-work), system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+h1,
+h2,
+h3,
+nav a,
+button {
+  font-family: var(--font-work), system-ui, -apple-system, Segoe UI, Roboto, Arial,
+    sans-serif;
 }
 
+/* Texto largo */
 p {
   color: var(--muted);
 }
+/* =========================================================
+   HERO ANIMATIONS
+   - Entrada (texto/botones)
+   - Blobs opcionales (si los usás)
+   - Aurora (movimiento premium SIN “placa”)
+   - Glow sweep (brillo sutil entre aurora y grid)
+   - Accesibilidad (reduce motion)
+   ========================================================= */
 
-@keyframes es-float-a {
-  0% { transform: translate3d(-8%, -6%, 0) scale(1); }
-  50% { transform: translate3d(6%, 4%, 0) scale(1.04); }
-  100% { transform: translate3d(-8%, -6%, 0) scale(1); }
-}
-
-@keyframes es-float-b {
-  0% { transform: translate3d(10%, 8%, 0) scale(1); }
-  50% { transform: translate3d(-6%, -4%, 0) scale(1.03); }
-  100% { transform: translate3d(10%, 8%, 0) scale(1); }
-}
-
+/* -------------------------
+   1) Entrada (fade + rise)
+   ------------------------- */
 @keyframes es-enter {
-  0% { opacity: 0; transform: translate3d(0, 10px, 0); }
-  100% { opacity: 1; transform: translate3d(0, 0, 0); }
+  0% {
+    opacity: 0;
+    transform: translate3d(0, 10px, 0);
+  }
+  100% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
 }
 
 .es-hero-enter {
   animation: es-enter 520ms ease-out both;
 }
 
-.es-hero-enter-delay-1 { animation-delay: 80ms; }
-.es-hero-enter-delay-2 { animation-delay: 140ms; }
-.es-hero-enter-delay-3 { animation-delay: 200ms; }
+/* Delays para escalonar la entrada (eyebrow → título → párrafo → CTAs) */
+.es-hero-enter-delay-1 {
+  animation-delay: 80ms;
+}
+.es-hero-enter-delay-2 {
+  animation-delay: 140ms;
+}
+.es-hero-enter-delay-3 {
+  animation-delay: 200ms;
+}
+
+/* ---------------------------------------
+   2) Blobs opcionales (si los usás luego)
+   - Animación por transform, pero solo
+     en elementos puntuales, no en el fondo
+   --------------------------------------- */
+@keyframes es-float-a {
+  0% {
+    transform: translate3d(-8%, -6%, 0) scale(1);
+  }
+  50% {
+    transform: translate3d(6%, 4%, 0) scale(1.04);
+  }
+  100% {
+    transform: translate3d(-8%, -6%, 0) scale(1);
+  }
+}
+
+@keyframes es-float-b {
+  0% {
+    transform: translate3d(10%, 8%, 0) scale(1);
+  }
+  50% {
+    transform: translate3d(-6%, -4%, 0) scale(1.03);
+  }
+  100% {
+    transform: translate3d(10%, 8%, 0) scale(1);
+  }
+}
 
 .es-blob-a {
   animation: es-float-a 12s ease-in-out infinite;
 }
-
 .es-blob-b {
   animation: es-float-b 14s ease-in-out infinite;
 }
 
-@media (prefers-reduced-motion: reduce) {
-  .es-hero-enter, .es-blob-a, .es-blob-b { animation: none !important; }
+/* ----------------------------------------------------
+   3) Aurora (premium)
+   IMPORTANTÍSIMO:
+   - Evitamos “placa” NO usando transform/translate
+   - Movemos el fondo con background-position
+   - La clase .es-aurora debe aplicarse al div
+     que tiene los radial-gradients en inline style
+   ---------------------------------------------------- */
+@keyframes es-aurora-shift {
+  0% {
+    background-position: 0% 0%, 100% 0%, 100% 100%, 0% 100%;
+  }
+  50% {
+    background-position: 10% 6%, 92% 8%, 96% 90%, 6% 94%;
+  }
+  100% {
+    background-position: 0% 0%, 100% 0%, 100% 100%, 0% 100%;
+  }
 }
 
+.es-aurora {
+  /* Asegura consistencia del render */
+  background-repeat: no-repeat;
+
+  /* Tamaños grandes para que el “respirar” sea sutil */
+  background-size: 140% 140%, 140% 140%, 140% 140%, 160% 160%;
+
+  /* Movimiento “lento y caro” */
+  animation: es-aurora-shift 18s ease-in-out infinite;
+
+  /* Hint de perf */
+  will-change: background-position;
+}
+
+/* ----------------------------------------------------
+   4) Glow sweep (brillo entre aurora y grid)
+   - Esto anima un div separado (overlay)
+   - NO “ensucia”: es muy leve y con blend suave
+   - Si no lo usás, podés borrar estas reglas
+   ---------------------------------------------------- */
+@keyframes es-glow-sweep {
+  0% {
+    transform: translateX(-12%);
+    opacity: 0;
+  }
+  25% {
+    opacity: 0.16;
+  }
+  50% {
+    opacity: 0.08;
+  }
+  100% {
+    transform: translateX(12%);
+    opacity: 0;
+  }
+}
+
+.es-glow-sweep {
+  animation: es-glow-sweep 9s ease-in-out infinite;
+  will-change: transform, opacity;
+}
+
+/* ----------------------------------------------------
+   5) Legacy drift/shimmer (NO recomendado para el hero)
+   - Estos eran los responsables del “efecto placa”
+   - Ideal: no aplicar .es-bg-drift al fondo del hero
+   ---------------------------------------------------- */
 @keyframes es-bg-drift {
-  0% { transform: translate3d(0,0,0) scale(1); }
-  50% { transform: translate3d(-1.5%, -1%, 0) scale(1.02); }
-  100% { transform: translate3d(0,0,0) scale(1); }
-}
-
-@keyframes es-shimmer {
-  0% { transform: translateX(-30%); opacity: 0.0; }
-  25% { opacity: 0.22; }
-  50% { opacity: 0.10; }
-  100% { transform: translateX(30%); opacity: 0.0; }
+  0% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+  50% {
+    transform: translate3d(-1.5%, -1%, 0) scale(1.02);
+  }
+  100% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
 }
 
 .es-bg-drift {
   animation: es-bg-drift 10s ease-in-out infinite;
 }
 
+@keyframes es-shimmer {
+  0% {
+    transform: translateX(-30%);
+    opacity: 0;
+  }
+  25% {
+    opacity: 0.22;
+  }
+  50% {
+    opacity: 0.1;
+  }
+  100% {
+    transform: translateX(30%);
+    opacity: 0;
+  }
+}
+
 .es-shimmer {
   animation: es-shimmer 6.5s ease-in-out infinite;
 }
+
+/* -------------------------
+   6) Accesibilidad
+   - Respeta reduce motion
+   ------------------------- */
+@media (prefers-reduced-motion: reduce) {
+  .es-hero-enter,
+  .es-blob-a,
+  .es-blob-b,
+  .es-aurora,
+  .es-glow-sweep,
+  .es-bg-drift,
+  .es-shimmer {
+    animation: none !important;
+  }
+}
+

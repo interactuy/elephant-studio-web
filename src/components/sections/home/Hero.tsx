@@ -4,75 +4,105 @@ import Container from "@/components/layout/Container";
 export default function Hero() {
   return (
     <section className="relative overflow-hidden">
-      {/* Fondo full-bleed */}
-      <div
-        aria-hidden
-        className="absolute inset-0 es-bg-drift"
-        style={{
-          background:
-            "radial-gradient(1200px 600px at 20% 10%, color-mix(in srgb, var(--accent) 22%, transparent), transparent 60%), radial-gradient(900px 500px at 80% 40%, color-mix(in srgb, var(--text) 10%, transparent), transparent 65%)",
-        }}
-      />
-
-      {/* Luces animadas */}
-      <div aria-hidden className="pointer-events-none absolute inset-0">
+      {/* ===== Fondo full-bleed tipo Radiant (pero Elephant) ===== */}
+      <div aria-hidden className="absolute inset-0">
+        {/* Base */}
         <div
-          className="es-blob-a absolute -top-32 -left-40 h-[420px] w-[420px] rounded-full blur-3xl opacity-60"
-          style={{
-            background:
-              "radial-gradient(circle, color-mix(in srgb, var(--accent) 45%, transparent), transparent 65%)",
-          }}
+          className="absolute inset-0"
+          style={{ background: "var(--hero-base)" }}
         />
-        <div
-          className="es-blob-b absolute -bottom-40 -right-32 h-[460px] w-[460px] rounded-full blur-3xl opacity-50"
-          style={{
-            background:
-              "radial-gradient(circle, color-mix(in srgb, var(--text) 14%, transparent), transparent 65%)",
-          }}
-        />
-      </div>
 
+        {/* Aurora */}
 <div
-  aria-hidden
-  className="pointer-events-none absolute inset-0 es-shimmer"
+  className="absolute inset-0 es-aurora pointer-events-none"
+  style={{
+    background: `
+      radial-gradient(900px 620px at 18% 18%, var(--hero-aurora-1), transparent 62%),
+      radial-gradient(820px 560px at 70% 12%, var(--hero-aurora-2), transparent 62%),
+      radial-gradient(860px 640px at 92% 70%, var(--hero-aurora-3), transparent 66%),
+      radial-gradient(760px 520px at 30% 85%, var(--hero-warm), transparent 70%)
+    `,
+  }}
+/>
+
+{/* Brillo premium (entre aurora y grid) */}
+<div
+  className="absolute inset-0 pointer-events-none"
   style={{
     background:
-      "linear-gradient(110deg, transparent 35%, color-mix(in srgb, var(--accent) 14%, transparent) 50%, transparent 65%)",
-    mixBlendMode: "screen",
+      "radial-gradient(900px 520px at 55% 18%, rgba(255,255,255,0.62), transparent 60%)",
+    opacity: 0.32,
+  }}
+/>
+
+{/* Foco suave en zona de contenido (tipo Radiant) */}
+<div
+  className="absolute inset-0 pointer-events-none"
+  style={{
+    background:
+      "radial-gradient(820px 520px at 32% 44%, rgba(255,255,255,0.55), transparent 62%)",
+    opacity: 0.28,
+  }}
+/>
+
+{/* Grid sutil (arriba) */}
+<div
+  className="absolute inset-0 pointer-events-none"
+  style={{
+    backgroundImage: `
+      linear-gradient(to right, var(--hero-grid) 1px, transparent 1px),
+      linear-gradient(to bottom, var(--hero-grid) 1px, transparent 1px)
+    `,
+    backgroundSize: "56px 56px",
+    opacity: 0.55,
+    maskImage: "radial-gradient(ellipse at 30% 20%, black 35%, transparent 75%)",
+    WebkitMaskImage:
+      "radial-gradient(ellipse at 30% 20%, black 35%, transparent 75%)",
   }}
 />
 
 
-      {/* Contenido */}
+        {/* Vignette */}
+        <div
+  className="absolute inset-0"
+  style={{
+    background:
+      "radial-gradient(1200px 800px at 20% 10%, rgba(255,255,255,0.0) 35%, rgba(0,0,0,0.04) 100%)",
+  }}
+/>
+
+
+      </div>
+
+      {/* ===== Contenido ===== */}
       <Container>
         <div className="relative min-h-[72vh] flex items-center py-24">
           <div className="max-w-3xl">
-            {/* Eyebrow */}
             <p
-              className="es-hero-enter text-xs sm:text-sm font-semibold tracking-wide uppercase"
-              style={{ fontFamily: "var(--font-work)", color: "var(--muted)" }}
+              className="text-xs sm:text-sm font-semibold tracking-wide uppercase"
+              style={{
+                fontFamily: "var(--font-work)",
+                color: "var(--muted)",
+              }}
             >
               Ecommerce + soluciones digitales para pymes
             </p>
 
-            {/* H1 */}
             <h1
-              className="es-hero-enter es-hero-enter-delay-1 mt-3 text-4xl sm:text-6xl leading-[1.05] tracking-tight"
-              style={{ fontFamily: "var(--font-work)", color: "var(--text)" }}
+              className="mt-4 text-4xl sm:text-6xl leading-[1.05] tracking-tight"
+              style={{ fontFamily: "var(--font-work)" }}
             >
               Vendé online con orden,
               <br />
               claridad y soporte real.
             </h1>
 
-            {/* Sub */}
-            <p className="es-hero-enter es-hero-enter-delay-2 mt-6 text-base sm:text-lg max-w-2xl">
+            <p className="mt-6 text-base sm:text-lg max-w-2xl">
               Diseñamos, desarrollamos e integramos lo necesario para que tu tienda
               funcione rápido, convierta mejor y sea fácil de mantener.
             </p>
 
-            {/* CTAs */}
-            <div className="es-hero-enter es-hero-enter-delay-3 mt-10 flex flex-col sm:flex-row gap-3">
+            <div className="mt-10 flex flex-col sm:flex-row gap-3">
               <Link
                 href="/contacto"
                 className="inline-flex items-center justify-center h-11 px-6 rounded-xl text-sm font-semibold"
@@ -86,17 +116,18 @@ export default function Hero() {
               </Link>
 
               <Link
-                href="/servicios"
-                className="inline-flex items-center justify-center h-11 px-6 rounded-xl text-sm font-semibold border"
-                style={{
-                  fontFamily: "var(--font-work)",
-                  background: "transparent",
-                  borderColor: "var(--border)",
-                  color: "var(--text)",
-                }}
-              >
-                Ver servicios
-              </Link>
+  href="/servicios"
+  className="inline-flex items-center justify-center h-11 px-5 rounded-xl border text-sm font-semibold transition-colors"
+  style={{
+    fontFamily: "var(--font-work)",
+    borderColor: "var(--border)",
+    color: "var(--text)",
+    background: "color-mix(in srgb, var(--surface) 65%, transparent)",
+  }}
+>
+  Ver servicios
+</Link>
+
             </div>
           </div>
         </div>

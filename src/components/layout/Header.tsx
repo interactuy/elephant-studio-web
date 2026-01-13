@@ -44,7 +44,7 @@ function ThemeToggle() {
       style={{
         borderColor: "var(--border)",
         color: "var(--text)",
-        background: "transparent",
+        background: "color-mix(in srgb, var(--surface) 65%, transparent)",
       }}
     >
       <span className="text-sm leading-none" style={{ fontFamily: "var(--font-work)" }}>
@@ -83,7 +83,7 @@ function MobileMenu() {
           fontFamily: "var(--font-work)",
           borderColor: "var(--border)",
           color: "var(--text)",
-          background: "transparent",
+          background: "color-mix(in srgb, var(--surface) 65%, transparent)",
         }}
       >
         Menú
