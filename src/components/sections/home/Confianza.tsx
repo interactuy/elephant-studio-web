@@ -1,177 +1,174 @@
 "use client";
 
-function cn(...classes: Array<string | false | null | undefined>) {
-  return classes.filter(Boolean).join(" ");
-}
+import React from "react";
 
-type Props = {
-  bgImageUrl?: string;
-};
-
-export default function ConfianzaSection({ bgImageUrl }: Props) {
+export default function Confianza() {
   return (
     <section
-      id="confianza"
-      className="relative bg-[var(--bg)] text-[var(--text)]"
+      className="relative py-20 sm:py-28"
+      style={{
+        background: "var(--bg)", // viene de tokens.css y cambia con data-theme
+        color: "var(--text)",
+      }}
     >
-      {/* Tech backdrop */}
-      <div aria-hidden className="pointer-events-none absolute inset-0 overflow-hidden">
-        {/* subtle grid */}
-        <div
-          className="absolute inset-0 opacity-[0.12]"
-          style={{
-            backgroundImage:
-              "linear-gradient(to right, rgba(8,51,68,0.10) 1px, transparent 1px), linear-gradient(to bottom, rgba(8,51,68,0.10) 1px, transparent 1px)",
-            backgroundSize: "56px 56px",
-          }}
-        />
-        {/* glow */}
-        <div
-          className="absolute -top-48 left-1/2 h-[420px] w-[980px] -translate-x-1/2 rounded-full"
-          style={{
-            background:
-              "radial-gradient(circle at 50% 50%, rgba(245,166,35,0.18), rgba(245,166,35,0.00) 60%)",
-          }}
-        />
-      </div>
+      <div className="mx-auto max-w-2xl px-6 lg:max-w-[var(--container)] lg:px-8">
+        {/* Header (izquierda, como el ejemplo) */}
+        <div className="max-w-2xl">
+          <p
+            className="text-base font-semibold"
+            style={{ color: "var(--accent-warm)" }}
+          >
+            Confianza
+          </p>
 
-      {/* Wide container */}
-      <div className="relative mx-auto w-full max-w-[1240px] px-5 md:px-8 py-16 md:py-20">
-        <div
-          className={cn(
-            "relative overflow-hidden rounded-[28px] md:rounded-[36px]",
-            "bg-[var(--card)]",
-            "ring-1 ring-black/5",
-            "shadow-[0_20px_70px_rgba(0,0,0,0.12)]"
-          )}
-        >
-          {/* Background image / gradient */}
-          <div
-            className="absolute inset-0"
-            style={{
-              backgroundImage: [
-                // neutral contrast veil that works in light & dark
-                "linear-gradient(90deg, rgba(6,33,26,0.70) 0%, rgba(6,33,26,0.45) 42%, rgba(6,33,26,0.00) 70%)",
-                bgImageUrl ? `url(${bgImageUrl})` : "",
-              ]
-                .filter(Boolean)
-                .join(", "),
-              backgroundSize: "cover",
-              backgroundPosition: "center",
-            }}
-          />
+          <h2
+            className="mt-3 text-4xl font-semibold tracking-tight text-balance sm:text-5xl"
+            style={{ color: "var(--text)" }}
+          >
+            Claridad, seguridad y cercanía para sostener tu eCommerce.
+          </h2>
 
-          {/* Grain */}
-          <div
-            aria-hidden
-            className="absolute inset-0 opacity-[0.08] mix-blend-multiply"
-            style={{
-              backgroundImage:
-                "url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='180' height='180' filter='url(%23n)' opacity='.35'/%3E%3C/svg%3E\")",
-              backgroundRepeat: "repeat",
-            }}
-          />
+          <p className="mt-5 text-base leading-relaxed" style={{ color: "var(--muted)" }}>
+            Trabajamos con procesos visibles, decisiones respaldadas y acompañamiento real. Sin humo, sin
+            promesas vacías: criterio y ejecución.
+          </p>
+        </div>
 
-          {/* Content */}
-          <div className="relative grid gap-10 p-8 md:p-12 lg:grid-cols-12">
-            {/* Copy */}
-            <div className="lg:col-span-6">
-              <p className="text-xs font-semibold uppercase tracking-widest text-white/70">
-                Confianza
-              </p>
+        {/* Cards (misma disposición: izquierda chica / centro grande / derecha mediana) */}
+        <div className="mt-14 lg:mt-18">
+          <div className="grid gap-6 lg:grid-cols-12 lg:items-end">
+            {/* LEFT — pequeña (blanca), baja */}
+            <div className="lg:col-span-4 lg:mt-24">
+              <div
+                className="rounded-3xl p-8"
+                style={{
+                  background: "var(--surface)",
+                  border: "1px solid var(--border)",
+                  boxShadow:
+                    "0 20px 50px rgba(0,0,0,0.06), 0 1px 0 rgba(255,255,255,0.35) inset",
+                }}
+              >
+                <p className="text-2xl font-semibold tracking-tight" style={{ color: "var(--text)" }}>
+                  Roadmap claro
+                </p>
 
-              <h2 className="mt-4 text-3xl md:text-5xl font-semibold tracking-tight text-white">
-                Una experiencia que se siente sólida desde el primer scroll.
-              </h2>
+                <p className="mt-4 text-sm font-semibold" style={{ color: "color-mix(in srgb, var(--text) 85%, transparent)" }}>
+                  Qué se hace y cuándo
+                </p>
 
-              <p className="mt-5 max-w-xl text-base md:text-lg leading-relaxed text-white/75">
-                La confianza no es un badge. Es velocidad, claridad, checkout
-                limpio y señales visuales correctas. Diseñamos tiendas que
-                reducen fricción y aumentan intención de compra.
-              </p>
-
-              <div className="mt-7 flex flex-col gap-3 sm:flex-row sm:items-center">
-                <a
-                  href="/contacto"
-                  className={cn(
-                    "inline-flex items-center justify-center rounded-xl px-6 py-3 text-sm font-semibold",
-                    "bg-[var(--accent)] text-[var(--accentFg)] hover:opacity-90 transition",
-                    "focus:outline-none focus:ring-2 focus:ring-[var(--ring)] focus:ring-offset-2 focus:ring-offset-transparent"
-                  )}
-                >
-                  Hablemos
-                </a>
-
-                <a
-                  href="/servicios"
-                  className={cn(
-                    "inline-flex items-center justify-center rounded-xl px-6 py-3 text-sm font-semibold",
-                    "bg-white/10 text-white hover:bg-white/15 transition",
-                    "ring-1 ring-white/20",
-                    "focus:outline-none focus:ring-2 focus:ring-white/40 focus:ring-offset-2 focus:ring-offset-transparent"
-                  )}
-                >
-                  Ver servicios
-                </a>
-              </div>
-
-              {/* Small tagline */}
-              <div className="mt-10 flex items-start gap-3 max-w-xs">
-                <div className="mt-1 h-2 w-2 rounded-full bg-[var(--accent)]" />
-                <p className="text-sm text-white/70">
-                  Todos necesitan confianza. No todos la construyen bien.
+                <p className="mt-3 text-sm leading-6" style={{ color: "var(--muted)" }}>
+                  Auditoría, plan de acción y ejecución priorizada. Sin pasos ocultos.
                 </p>
               </div>
             </div>
 
-            {/* Spacer column */}
-            <div className="lg:col-span-6" />
-
-            {/* Floating notification */}
-            <div className="absolute right-6 top-6 md:right-10 md:top-10">
+            {/* CENTER — grande (oscura), protagonista */}
+            <div className="lg:col-span-4">
               <div
-                className={cn(
-                  "rounded-2xl bg-[var(--card)]/90 backdrop-blur-md",
-                  "ring-1 ring-black/5",
-                  "shadow-[0_18px_55px_rgba(0,0,0,0.18)]",
-                  "px-4 py-3 md:px-5 md:py-4",
-                  "w-[280px] md:w-[320px]"
-                )}
+                className="rounded-3xl p-9 sm:p-10"
+                style={{
+                  minHeight: 360,
+                  // verde de marca (light) + se mantiene premium en dark
+                  background:
+                    "linear-gradient(180deg, color-mix(in srgb, var(--green-deep) 92%, #000 8%), #05070c)",
+                  border: "1px solid rgba(255,255,255,0.08)",
+                  boxShadow:
+                    "0 28px 80px rgba(0,0,0,0.25), 0 1px 0 rgba(255,255,255,0.08) inset",
+                }}
               >
-                <div className="flex items-center justify-between gap-3">
-                  <p className="text-xs font-semibold text-[var(--text)]">
-                    Notificación
-                  </p>
-                  <span className="text-xs text-[var(--muted)]">ahora</span>
-                </div>
-
-                <p className="mt-2 text-sm text-[var(--text)] leading-relaxed">
-                  Checkout optimizado y señales de confianza implementadas.
+                <p
+                  className="text-3xl font-semibold tracking-tight"
+                  style={{ color: "rgba(255,255,255,0.92)" }}
+                >
+                  Decisiones seguras
                 </p>
 
-                <div className="mt-3 flex flex-wrap gap-2">
-                  {["Speed", "Trust", "UX"].map((t) => (
-                    <span
-                      key={t}
-                      className="rounded-full bg-black/5 ring-1 ring-black/5 px-2.5 py-1 text-[11px] font-semibold text-[var(--text)]"
+                <p
+                  className="mt-6 text-sm font-semibold"
+                  style={{ color: "rgba(255,255,255,0.78)" }}
+                >
+                  Criterio respaldado por datos
+                </p>
+
+                <p className="mt-3 text-sm leading-6" style={{ color: "rgba(255,255,255,0.62)" }}>
+                  Performance, UX y conversión medidos antes y después. Cambios con justificación, no con
+                  intuición.
+                </p>
+
+                {/* Mini “stats” sin pills (solo bloques discretos, como apoyo visual) */}
+                <div className="mt-10 grid grid-cols-2 gap-3">
+                  {[
+                    { k: "UX", v: "Auditado" },
+                    { k: "Performance", v: "Medido" },
+                    { k: "Conversión", v: "Iterada" },
+                    { k: "Riesgo", v: "Controlado" },
+                  ].map((x) => (
+                    <div
+                      key={x.k}
+                      className="rounded-2xl px-4 py-3"
+                      style={{
+                        background: "rgba(255,255,255,0.06)",
+                        border: "1px solid rgba(255,255,255,0.08)",
+                      }}
                     >
-                      {t}
-                    </span>
+                      <p className="text-[10px] uppercase tracking-wide" style={{ color: "rgba(255,255,255,0.45)" }}>
+                        {x.k}
+                      </p>
+                      <p className="mt-1 text-sm font-semibold" style={{ color: "rgba(255,255,255,0.82)" }}>
+                        {x.v}
+                      </p>
+                    </div>
                   ))}
                 </div>
               </div>
             </div>
 
-            {/* Accent flare */}
-            <div
-              aria-hidden
-              className="absolute -right-28 -top-28 h-72 w-72 rounded-full"
-              style={{
-                background:
-                  "radial-gradient(circle at 30% 30%, rgba(245,166,35,0.26), rgba(245,166,35,0.00) 70%)",
-              }}
-            />
+            {/* RIGHT — mediana (azul), un poco más baja que la central */}
+            <div className="lg:col-span-4 lg:mt-10">
+              <div
+                className="rounded-3xl p-9 sm:p-10"
+                style={{
+                  minHeight: 300,
+                  background:
+                    "linear-gradient(180deg, color-mix(in srgb, var(--blue-deep) 92%, #000 8%), #070a12)",
+                  border: "1px solid rgba(255,255,255,0.08)",
+                  boxShadow:
+                    "0 26px 70px rgba(0,0,0,0.22), 0 1px 0 rgba(255,255,255,0.08) inset",
+                }}
+              >
+                <p
+                  className="text-3xl font-semibold tracking-tight"
+                  style={{ color: "rgba(255,255,255,0.92)" }}
+                >
+                  Acompañamiento real
+                </p>
+
+                <p className="mt-6 text-sm font-semibold" style={{ color: "rgba(255,255,255,0.78)" }}>
+                  Cercanía sin perder estructura
+                </p>
+
+                <p className="mt-3 text-sm leading-6" style={{ color: "rgba(255,255,255,0.62)" }}>
+                  Comunicación directa, seguimiento constante y decisiones compartidas. No estás “solo con la
+                  tienda”.
+                </p>
+
+                {/* Sin pills: lista simple, limpia */}
+                <ul className="mt-8 space-y-3 text-sm" style={{ color: "rgba(255,255,255,0.72)" }}>
+                  {["Respuesta rápida", "Check-ins", "Prioridades claras", "Iteración continua"].map((t) => (
+                    <li key={t} className="flex items-start gap-3">
+                      <span
+                        className="mt-2 h-1.5 w-1.5 rounded-full"
+                        style={{ background: "var(--accent-warm)" }}
+                      />
+                      <span>{t}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
           </div>
+
+          {/* Nota: en mobile apila bien; en desktop reproduce la composición (izq abajo, centro dominante, der media). */}
         </div>
       </div>
     </section>
