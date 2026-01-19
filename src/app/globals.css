@@ -235,3 +235,51 @@ p {
   }
 }
 
+/* =========================================================
+   PAGE FLOW — APPLY + SECTION UTILS
+   ========================================================= */
+
+html,
+body {
+  background: var(--page-gradient);
+}
+
+body {
+  background-attachment: fixed;
+}
+
+/* Secciones con alternancia A/B */
+.section {
+  position: relative;
+  z-index: 1;
+}
+
+.section-a {
+  background: transparent; /* deja ver el gradiente global */
+}
+
+.section-b {
+  background: color-mix(in srgb, var(--section-b) 96%, transparent);
+}
+
+/* Fade de transición (evita cortes) */
+.section-a::before,
+.section-b::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 64px;
+  pointer-events: none;
+}
+
+.after-a::before {
+  /* si esta sección viene después de una A */
+  background: linear-gradient(to bottom, var(--section-a), transparent);
+}
+
+.after-b::before {
+  /* si esta sección viene después de una B */
+  background: linear-gradient(to bottom, var(--section-b), transparent);
+}

@@ -65,3 +65,37 @@
 
   --hero-grid: rgba(255, 255, 255, 0.06);
 }
+
+/* =========================================================
+   ELEPHANT — PAGE FLOW TOKENS
+   ========================================================= */
+
+/* LIGHT (default) */
+:root {
+  /* Alternancia sutil por sección */
+  --section-a: var(--bg);
+  --section-b: color-mix(in srgb, var(--bg) 86%, var(--surface));
+
+  /* Gradiente largo para fluidez (muy sutil) */
+  --page-gradient: linear-gradient(
+    180deg,
+    color-mix(in srgb, var(--bg) 92%, white) 0%,
+    color-mix(in srgb, var(--bg) 96%, var(--surface)) 35%,
+    color-mix(in srgb, var(--bg) 100%, var(--surface)) 70%,
+    color-mix(in srgb, var(--bg) 92%, var(--hero-warm)) 100%
+  );
+}
+
+/* DARK */
+[data-theme="dark"] {
+  --section-a: var(--bg);
+  --section-b: color-mix(in srgb, var(--bg) 84%, white 6%);
+
+  --page-gradient: linear-gradient(
+    180deg,
+    color-mix(in srgb, var(--bg) 92%, black) 0%,
+    color-mix(in srgb, var(--bg) 96%, var(--hero-aurora-2)) 40%,
+    color-mix(in srgb, var(--bg) 94%, var(--hero-aurora-1)) 75%,
+    color-mix(in srgb, var(--bg) 92%, black) 100%
+  );
+}

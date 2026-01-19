@@ -8,12 +8,35 @@ import CTA from "@/components/sections/home/CTA";
 export default function HomePage() {
   return (
     <main className="pt-0">
-      <Hero />
-      <Servicios />
-      <Confianza />
-      <NuestroTrabajo />
-      <Nosotros />
-      <CTA />
+      {/* HERO */}
+      <section className="section section-a">
+        <Hero />
+      </section>
+
+      {/* SERVICIOS */}
+      <section className="section section-a">
+        <Servicios />
+      </section>
+
+      {/* CONFIANZA */}
+      <section className="section section-b after-a">
+        <Confianza />
+      </section>
+
+      {/* NUESTRO TRABAJO */}
+      <section className="section section-a after-b">
+        <NuestroTrabajo />
+      </section>
+
+      {/* NOSOTROS */}
+      <section className="section section-b after-a">
+        <Nosotros />
+      </section>
+
+      {/* CTA FINAL */}
+      <section className="section section-a after-b">
+        <CTA />
+      </section>
     </main>
   );
 }

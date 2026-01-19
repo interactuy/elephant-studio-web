@@ -14,31 +14,31 @@ type Work = {
 const works: Work[] = [
   {
     id: "1",
-    title: "Estructura que vende sin gritar",
-    desc: "Navegación y colecciones para reducir fricción y aumentar intención.",
+    title: "Too Much Bueno",
+    desc: "Desarrollo de tienda online internacional",
     service: "Desarrollo eCommerce",
     img: { src: "/work/01.jpg", alt: "Proyecto eCommerce — estructura" },
   },
   {
     id: "2",
-    title: "Checkout sin dudas",
-    desc: "Pagos, pasos y señales de confianza para cerrar más rápido.",
-    service: "Optimización",
-    img: { src: "/work/02.jpg", alt: "Proyecto eCommerce — checkout" },
+    title: "Maki",
+    desc: "Desarrollo de tienda online desde cero",
+    service: "Desarrollo ecommerce",
+    img: { src: "/work/maki.png", alt: "Proyecto eCommerce — checkout" },
   },
   {
     id: "3",
-    title: "Base técnica + performance",
-    desc: "Speed budget, assets y CWV para sostener resultados.",
+    title: "Urufarma",
+    desc: "Optimizacion.",
     service: "Optimización",
-    img: { src: "/work/03.jpg", alt: "Proyecto eCommerce — performance" },
+    img: { src: "/work/urufarma.png", alt: "Proyecto eCommerce — performance" },
   },
   {
     id: "4",
-    title: "Integraciones a medida",
+    title: "Cosplay Anime Store",
     desc: "Automatizaciones y conexiones cuando lo estándar no alcanza.",
-    service: "Soluciones a medida",
-    img: { src: "/work/04.jpg", alt: "Proyecto eCommerce — integraciones" },
+    service: "Desarrollo ecommerce",
+    img: { src: "/work/cosplay.png", alt: "Proyecto eCommerce — integraciones" },
   },
 ];
 
