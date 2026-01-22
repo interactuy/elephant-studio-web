@@ -4,108 +4,93 @@ import Container from "@/components/layout/Container";
 export default function Hero() {
   return (
     <section className="relative overflow-hidden">
-      {/* ===== Fondo full-bleed tipo Radiant (pero Elephant) ===== */}
+      {/* ===== Fondo por theme (lee data-theme del <html>) ===== */}
       <div aria-hidden className="absolute inset-0">
-        {/* Base */}
+        {/* LIGHT (default) */}
         <div
-          className="absolute inset-0"
-          style={{ background: "var(--hero-base)" }}
+          className="absolute inset-0 opacity-100 transition-opacity duration-300
+                     [html[data-theme=dark]_&]:opacity-0"
+          style={{
+            backgroundImage: "url(/hero/lightback.png)",
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+          }}
         />
 
-        {/* Aurora */}
-<div
-  className="absolute inset-0 es-aurora pointer-events-none"
-  style={{
-    background: `
-      radial-gradient(900px 620px at 18% 18%, var(--hero-aurora-1), transparent 62%),
-      radial-gradient(820px 560px at 70% 12%, var(--hero-aurora-2), transparent 62%),
-      radial-gradient(860px 640px at 92% 70%, var(--hero-aurora-3), transparent 66%),
-      radial-gradient(760px 520px at 30% 85%, var(--hero-warm), transparent 70%)
-    `,
-  }}
-/>
-
-{/* Brillo premium (entre aurora y grid) */}
-<div
-  className="absolute inset-0 pointer-events-none"
-  style={{
-    background:
-      "radial-gradient(900px 520px at 55% 18%, rgba(255,255,255,0.62), transparent 60%)",
-    opacity: 0.32,
-  }}
-/>
-
-{/* Foco suave en zona de contenido (tipo Radiant) */}
-<div
-  className="absolute inset-0 pointer-events-none"
-  style={{
-    background:
-      "radial-gradient(820px 520px at 32% 44%, rgba(255,255,255,0.55), transparent 62%)",
-    opacity: 0.28,
-  }}
-/>
-
-{/* Grid sutil (arriba) */}
-<div
-  className="absolute inset-0 pointer-events-none"
-  style={{
-    backgroundImage: `
-      linear-gradient(to right, var(--hero-grid) 1px, transparent 1px),
-      linear-gradient(to bottom, var(--hero-grid) 1px, transparent 1px)
-    `,
-    backgroundSize: "56px 56px",
-    opacity: 0.55,
-    maskImage: "radial-gradient(ellipse at 30% 20%, black 35%, transparent 75%)",
-    WebkitMaskImage:
-      "radial-gradient(ellipse at 30% 20%, black 35%, transparent 75%)",
-  }}
-/>
-
-
-        {/* Vignette */}
+        {/* DARK */}
         <div
-  className="absolute inset-0"
-  style={{
-    background:
-      "radial-gradient(1200px 800px at 20% 10%, rgba(255,255,255,0.0) 35%, rgba(0,0,0,0.04) 100%)",
-  }}
-/>
+          className="absolute inset-0 opacity-0 transition-opacity duration-300
+                     [html[data-theme=dark]_&]:opacity-100"
+          style={{
+            backgroundImage: "url(/hero/darkback.png)",
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+          }}
+        />
 
-
+        {/* Overlay sutil para contraste */}
+        <div
+          className="absolute inset-0 pointer-events-none"
+          style={{
+            background:
+              "linear-gradient(to bottom, rgba(0,0,0,0.12), rgba(0,0,0,0.22))",
+          }}
+        />
       </div>
 
       {/* ===== Contenido ===== */}
       <Container>
         <div className="relative min-h-[72vh] flex items-center py-24">
           <div className="max-w-3xl">
+            {/* Eyebrow */}
             <p
-              className="text-xs sm:text-sm font-semibold tracking-wide uppercase"
+              className="text-xs sm:text-sm font-semibold tracking-wide uppercase
+                         opacity-0 animate-[es-fadeUp_0.6s_ease-out_forwards]"
               style={{
                 fontFamily: "var(--font-work)",
-                color: "var(--muted)",
+                color: "var(--accent-warm)",
+                animationDelay: "0.1s",
               }}
             >
               Ecommerce + soluciones digitales para pymes
             </p>
 
+            {/* Título */}
             <h1
-              className="mt-4 text-4xl sm:text-6xl leading-[1.05] tracking-tight"
-              style={{ fontFamily: "var(--font-work)" }}
+              className="mt-4 text-4xl sm:text-6xl leading-[1.05] tracking-tight
+                         opacity-0 animate-[es-fadeUp_0.6s_ease-out_forwards]"
+              style={{
+                fontFamily: "var(--font-work)",
+                animationDelay: "0.2s",
+              }}
             >
               Vendé online con orden,
               <br />
               claridad y soporte real.
             </h1>
 
-            <p className="mt-6 text-base sm:text-lg max-w-2xl">
+            {/* Descripción */}
+            <p
+              className="mt-6 text-base sm:text-lg max-w-2xl
+                         opacity-0 animate-[es-fadeUp_0.6s_ease-out_forwards]"
+              style={{ animationDelay: "0.3s" }}
+            >
               Diseñamos, desarrollamos e integramos lo necesario para que tu tienda
               funcione rápido, convierta mejor y sea fácil de mantener.
             </p>
 
-            <div className="mt-10 flex flex-col sm:flex-row gap-3">
+            {/* CTAs */}
+            <div
+              className="mt-10 flex flex-col sm:flex-row gap-3
+                         opacity-0 animate-[es-fadeUp_0.6s_ease-out_forwards]"
+              style={{ animationDelay: "0.4s" }}
+            >
+              {/* Botón primario */}
               <Link
                 href="/contacto"
-                className="inline-flex items-center justify-center h-11 px-6 rounded-xl text-sm font-semibold"
+                className="inline-flex items-center justify-center h-11 px-6 rounded-xl
+                           text-sm font-semibold transition-colors duration-200
+                           hover:brightness-95"
                 style={{
                   fontFamily: "var(--font-work)",
                   background: "var(--accent)",
@@ -115,19 +100,22 @@ export default function Hero() {
                 Contacto
               </Link>
 
+              {/* Botón secundario */}
               <Link
-  href="/servicios"
-  className="inline-flex items-center justify-center h-11 px-5 rounded-xl border text-sm font-semibold transition-colors"
-  style={{
-    fontFamily: "var(--font-work)",
-    borderColor: "var(--border)",
-    color: "var(--text)",
-    background: "color-mix(in srgb, var(--surface) 65%, transparent)",
-  }}
->
-  Ver servicios
-</Link>
-
+                href="/servicios"
+                className="inline-flex items-center justify-center h-11 px-5 rounded-xl
+                           border text-sm font-semibold transition-colors duration-200
+                           hover:bg-[color-mix(in_srgb,var(--surface)_85%,transparent)]"
+                style={{
+                  fontFamily: "var(--font-work)",
+                  borderColor: "var(--border)",
+                  color: "var(--text)",
+                  background:
+                    "color-mix(in srgb, var(--surface) 65%, transparent)",
+                }}
+              >
+                Ver servicios
+              </Link>
             </div>
           </div>
         </div>

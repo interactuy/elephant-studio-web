@@ -283,3 +283,14 @@ body {
   /* si esta sección viene después de una B */
   background: linear-gradient(to bottom, var(--section-b), transparent);
 }
+
+@keyframes es-fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

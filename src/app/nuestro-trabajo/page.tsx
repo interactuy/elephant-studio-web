@@ -37,7 +37,7 @@ const WORKS: Work[] = [
     tag: "Desarrollo eCommerce",
     desc: "Tienda desde cero. Estructura de catálogo y navegación limpia para escalar.",
     href: "/nuestro-trabajo/maki",
-    imageUrl: "/placeholders/work-02.jpg",
+    imageUrl: "/work/maki.png",
   },
   {
     id: "urufarma",
@@ -46,7 +46,7 @@ const WORKS: Work[] = [
     tag: "Optimización",
     desc: "Mejoras de performance, UX y señales de confianza para cerrar más rápido.",
     href: "/nuestro-trabajo/urufarma",
-    imageUrl: "/placeholders/work-03.jpg",
+    imageUrl: "/work/urufarma.png",
   },
   {
     id: "cosplay",
@@ -58,13 +58,13 @@ const WORKS: Work[] = [
     imageUrl: "/placeholders/work-04.jpg",
   },
   {
-    id: "atelier",
-    title: "Atelier Goods",
-    client: "Atelier",
-    tag: "Auditoría",
+    id: "epoca",
+    title: "epoca",
+    client: "epoca",
+    tag: "Desarrollo Ecommerce",
     desc: "Auditoría completa con roadmap priorizado y quick wins para ejecutar.",
-    href: "/nuestro-trabajo/atelier",
-    imageUrl: "/placeholders/work-05.jpg",
+    href: "/nuestro-trabajo/epoca",
+    imageUrl: "/work/cases/epoca-portada.png",
   },
   {
     id: "paper",
