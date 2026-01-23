@@ -43,7 +43,7 @@ export const CASES: CaseStudy[] = [
       "Base sólida para iterar campañas sin romper UX.",
     ],
     images: {
-      cover: "/placeholders/cases/case-01.jpg",
+      cover: "/work/cases/tmb-portada.png",
       mid: "/placeholders/cases/case-02.jpg",
       end: "/placeholders/cases/case-03.jpg",
     },
@@ -105,13 +105,13 @@ export const CASES: CaseStudy[] = [
       "Sitio más liviano y consistente.",
     ],
     images: {
-      cover: "/placeholders/cases/case-07.jpg",
+      cover: "/work/cases/urufarma-portada.png",
       mid: "/placeholders/cases/case-08.jpg",
       end: "/placeholders/cases/case-09.jpg",
     },
   },
   {
-    slug: "cosplay-anime-store",
+    slug: "cosplay",
     title: "Cosplay Anime Store",
     client: "Cosplay Anime Store",
     category: "Soluciones a medida",
@@ -136,7 +136,7 @@ export const CASES: CaseStudy[] = [
       "Mejor control de post-venta.",
     ],
     images: {
-      cover: "/placeholders/cases/case-10.jpg",
+      cover: "/work/cases/cosplay-portada.png",
       mid: "/placeholders/cases/case-11.jpg",
       end: "/placeholders/cases/case-12.jpg",
     },
@@ -173,10 +173,10 @@ export const CASES: CaseStudy[] = [
     },
   },
   {
-    slug: "slow-essentials",
-    title: "Slow Essentials",
-    client: "Slow Essentials",
-    category: "Gestión mensual",
+    slug: "esquina-cafe",
+    title: "Esquina Cafe",
+    client: "Esquina Cafe",
+    category: "Desarrollo Ecommerce",
     summary:
       "Acompañamiento mensual para ejecutar mejoras, sostener iteración y mantener la tienda ordenada y rápida.",
     serviceTags: ["Gestión", "Iteración", "UX", "Performance"],
@@ -198,16 +198,16 @@ export const CASES: CaseStudy[] = [
       "Operación más estable.",
     ],
     images: {
-      cover: "/placeholders/cases/case-16.jpg",
+      cover: "/work/cases/esquinacafe-portada.png",
       mid: "/placeholders/cases/case-17.jpg",
       end: "/placeholders/cases/case-18.jpg",
     },
   },
   {
-    slug: "studio-kit",
-    title: "Studio Kit",
-    client: "Studio Kit",
-    category: "Arquitectura",
+    slug: "finacc-vega",
+    title: "Finacc Vega",
+    client: "Finacc Vega",
+    category: "Soluciones a medida.",
     summary:
       "Revisión de arquitectura y sistema de componentes para escalar nuevas secciones sin romper estética ni consistencia.",
     serviceTags: ["Sistema UI", "Arquitectura", "Componentes", "Mantenible"],
@@ -229,16 +229,16 @@ export const CASES: CaseStudy[] = [
       "Menos retrabajo.",
     ],
     images: {
-      cover: "/placeholders/cases/case-19.jpg",
+      cover: "/work/cases/finaccvega-portada.png",
       mid: "/placeholders/cases/case-20.jpg",
       end: "/placeholders/cases/case-21.jpg",
     },
   },
   {
-    slug: "atelier-labs",
-    title: "Atelier Labs",
-    client: "Atelier Labs",
-    category: "Optimización + CRO",
+    slug: "huella-propia",
+    title: "Huella Propia",
+    client: "Huella Propia",
+    category: "Desarrollo Ecommerce",
     summary:
       "Mejoras enfocadas en confianza, claridad y micro-fricciones: menos dudas, más intención convertida en compra.",
     serviceTags: ["CRO", "Confianza", "UX", "Checkout"],
@@ -260,7 +260,7 @@ export const CASES: CaseStudy[] = [
       "Más consistencia en conversiones.",
     ],
     images: {
-      cover: "/placeholders/cases/case-22.jpg",
+      cover: "/work/cases/huella-portada.png",
       mid: "/placeholders/cases/case-23.jpg",
       end: "/placeholders/cases/case-24.jpg",
     },
