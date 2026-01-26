@@ -14,31 +14,31 @@ type Work = {
 const works: Work[] = [
   {
     id: "1",
-    title: "Too Much Bueno",
+    title: "Esquina Cafe",
     desc: "Desarrollo de tienda online internacional",
-    service: "Desarrollo eCommerce",
-    img: { src: "/work/01.jpg", alt: "Proyecto eCommerce — estructura" },
+    service: "Soluciones a medida",
+    img: { src: "/work/cases/esquinacafe-portada.png", alt: "Proyecto eCommerce — estructura" },
   },
   {
     id: "2",
     title: "Maki",
     desc: "Desarrollo de tienda online desde cero",
     service: "Desarrollo ecommerce",
-    img: { src: "/work/maki.png", alt: "Proyecto eCommerce — checkout" },
+    img: { src: "/work/cases/maki-portada.png", alt: "Proyecto eCommerce — checkout" },
   },
   {
     id: "3",
     title: "Urufarma",
     desc: "Optimizacion.",
     service: "Optimización",
-    img: { src: "/work/urufarma.png", alt: "Proyecto eCommerce — performance" },
+    img: { src: "/work/cases/urufarma-portada.png", alt: "Proyecto eCommerce — performance" },
   },
   {
     id: "4",
-    title: "Cosplay Anime Store",
+    title: "Finacc Vega",
     desc: "Automatizaciones y conexiones cuando lo estándar no alcanza.",
-    service: "Desarrollo ecommerce",
-    img: { src: "/work/cosplay.png", alt: "Proyecto eCommerce — integraciones" },
+    service: "Soluciones a medida",
+    img: { src: "/work/cases/finaccvega-portada.png", alt: "Proyecto eCommerce — integraciones" },
   },
 ];
 

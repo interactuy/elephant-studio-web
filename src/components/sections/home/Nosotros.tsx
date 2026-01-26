@@ -78,7 +78,7 @@ export default function NosotrosHome() {
                 playsInline
                 poster="/img/nosotros-poster.jpg"
               >
-                <source src="/video/nosotros.mp4" type="video/mp4" />
+                <source src="/us/us-home.mp4" type="video/mp4" />
               </video>
 
               {/* Overlay sutil para que se vea premium en dark/light */}
