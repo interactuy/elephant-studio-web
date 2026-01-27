@@ -22,7 +22,6 @@ export default async function CaseStudyPage({ params }: Props) {
   if (!cs) return notFound();
 
   return (
-    // ✅ Baja la página completa para que no quede pegada al header fixed
     <main className="pt-24 sm:pt-28">
       {/* HERO */}
       <section className="pb-12 sm:pb-14">
@@ -31,7 +30,7 @@ export default async function CaseStudyPage({ params }: Props) {
             {/* Left */}
             <div>
               <div
-                className="text-xs font-semibold uppercase tracking-wide"
+                className="text-base font-semibold"
                 style={{
                   color: "color-mix(in srgb, var(--accent-warm) 92%, transparent)",
                 }}
@@ -46,7 +45,10 @@ export default async function CaseStudyPage({ params }: Props) {
                 {cs.title}
               </h1>
 
-              <p className="mt-4 text-base sm:text-lg max-w-[60ch]" style={{ color: "var(--muted)" }}>
+              <p
+                className="mt-4 text-base sm:text-lg max-w-[60ch]"
+                style={{ color: "var(--muted)" }}
+              >
                 {cs.summary}
               </p>
 
@@ -133,7 +135,7 @@ export default async function CaseStudyPage({ params }: Props) {
               </div>
 
               <div className="mt-4 text-xs" style={{ color: "var(--muted)" }}>
-                Métricas de referencia / estimaciones ilustrativas hasta que cargues las reales.
+               {/* Metricas de referencia iba aca*/}
               </div>
             </div>
           </div>
@@ -151,13 +153,7 @@ export default async function CaseStudyPage({ params }: Props) {
             }}
           >
             <div className="relative aspect-[16/8] w-full">
-              <Image
-                src={cs.images.cover}
-                alt={`${cs.title} — portada`}
-                fill
-                priority
-                className="object-cover"
-              />
+              <Image src={cs.images.cover} alt={`${cs.title} — portada`} fill priority className="object-cover" />
             </div>
 
             <div
@@ -172,127 +168,126 @@ export default async function CaseStudyPage({ params }: Props) {
         </Container>
       </section>
 
-      {/* BODY (sin sidebar) */}
+      {/* BODY */}
       <section className="pb-16">
         <Container>
-  {/* ancho “full” del sitio */}
-  <div className="grid gap-10 lg:grid-cols-[1fr,1fr] lg:items-start">
-    {/* columna principal */}
-    <div className="lg:col-span-2">
-      <h2
-        className="text-2xl sm:text-3xl font-semibold tracking-tight"
-        style={{ color: "var(--text)", fontFamily: "var(--font-work)" }}
-      >
-        Contexto y enfoque
-      </h2>
+          <div className="grid gap-10 lg:grid-cols-[1fr,1fr] lg:items-start">
+            <div className="lg:col-span-2">
+              <h2
+                className="text-2xl sm:text-3xl font-semibold tracking-tight"
+                style={{ color: "var(--text)", fontFamily: "var(--font-work)" }}
+              >
+                Contexto y enfoque
+              </h2>
 
-      <div className="mt-5 space-y-4 text-sm sm:text-base max-w-[80ch]" style={{ color: "var(--muted)" }}>
-        <p>
-          Este caso se trabajó con una premisa clara: que la tienda no se sienta como “algo lindo”, sino como un
-          sistema confiable para vender. Menos capas, más criterio. Decisiones justificadas.
-        </p>
-        <p>
-          El trabajo se orientó a reducir fricción, ordenar jerarquía y construir una base mantenible para que el
-          crecimiento no rompa la experiencia.
-        </p>
-      </div>
+              {/* ✅ AHORA VIENE DESDE cases.ts */}
+              <div
+                className="mt-5 space-y-4 text-sm sm:text-base max-w-[80ch]"
+                style={{ color: "var(--muted)" }}
+              >
+                {cs.context.map((p) => (
+                  <p key={p}>{p}</p>
+                ))}
+              </div>
 
-      {/* Desafío / Resultados (a lo ancho) */}
-      <div className="mt-10 grid gap-6 lg:grid-cols-2">
-        <div
-          className="rounded-2xl border p-6"
-          style={{
-            borderColor: "var(--border)",
-            background: "color-mix(in srgb, var(--surface) 80%, transparent)",
-          }}
-        >
-          <div className="text-xs font-semibold uppercase tracking-wide" style={{ color: "var(--muted)" }}>
-            Desafío
-          </div>
-          <p className="mt-3 text-sm sm:text-base" style={{ color: "var(--text)" }}>
-            {cs.challenge}
-          </p>
-        </div>
-
-        <div
-          className="rounded-2xl border p-6"
-          style={{
-            borderColor: "var(--border)",
-            background: "color-mix(in srgb, var(--surface) 80%, transparent)",
-          }}
-        >
-          <div className="text-xs font-semibold uppercase tracking-wide" style={{ color: "var(--muted)" }}>
-            Resultados
-          </div>
-          <ul className="mt-3 space-y-2 text-sm sm:text-base" style={{ color: "var(--text)" }}>
-            {cs.outcome.map((o) => (
-              <li key={o} className="flex gap-2">
-                <span
-                  aria-hidden
-                  className="mt-2 h-1.5 w-1.5 rounded-full"
+              {/* Desafío / Resultados */}
+              <div className="mt-10 grid gap-6 lg:grid-cols-2">
+                <div
+                  className="rounded-2xl border p-6"
                   style={{
-                    background: "color-mix(in srgb, var(--accent-warm) 80%, transparent)",
+                    borderColor: "var(--border)",
+                    background: "color-mix(in srgb, var(--surface) 80%, transparent)",
                   }}
-                />
-                <span>{o}</span>
-              </li>
-            ))}
-          </ul>
-        </div>
-      </div>
+                >
+                  <div className="text-xs font-semibold uppercase tracking-wide" style={{ color: "var(--muted)" }}>
+                    Desafío
+                  </div>
+                  <p className="mt-3 text-sm sm:text-base" style={{ color: "var(--text)" }}>
+                    {cs.challenge}
+                  </p>
+                </div>
 
-      {/* Mid image (full) */}
-      <div className="mt-10">
-        <div
-          className="relative overflow-hidden rounded-3xl border"
-          style={{
-            borderColor: "var(--border)",
-            background: "color-mix(in srgb, var(--surface) 70%, transparent)",
-          }}
-        >
-          <div className="relative aspect-[16/9] w-full">
-            <Image src={cs.images.mid} alt={`${cs.title} — detalle`} fill className="object-cover" />
+                <div
+                  className="rounded-2xl border p-6"
+                  style={{
+                    borderColor: "var(--border)",
+                    background: "color-mix(in srgb, var(--surface) 80%, transparent)",
+                  }}
+                >
+                  <div className="text-xs font-semibold uppercase tracking-wide" style={{ color: "var(--muted)" }}>
+                    Resultados
+                  </div>
+                  <ul className="mt-3 space-y-2 text-sm sm:text-base" style={{ color: "var(--text)" }}>
+                    {cs.outcome.map((o) => (
+                      <li key={o} className="flex gap-2">
+                        <span
+                          aria-hidden
+                          className="mt-2 h-1.5 w-1.5 rounded-full"
+                          style={{
+                            background: "color-mix(in srgb, var(--accent-warm) 80%, transparent)",
+                          }}
+                        />
+                        <span>{o}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+
+              {/* Mid image */}
+              <div className="mt-10">
+                <div
+                  className="relative overflow-hidden rounded-3xl border"
+                  style={{
+                    borderColor: "var(--border)",
+                    background: "color-mix(in srgb, var(--surface) 70%, transparent)",
+                  }}
+                >
+                  <div className="relative aspect-[16/9] w-full">
+                    <Image src={cs.images.mid} alt={`${cs.title} — detalle`} fill className="object-cover" />
+                  </div>
+                </div>
+              </div>
+
+              {/* Approach */}
+              <div className="mt-10">
+                <h3
+                  className="text-xl font-semibold"
+                  style={{ color: "var(--text)", fontFamily: "var(--font-work)" }}
+                >
+                  Qué hicimos
+                </h3>
+                <ul className="mt-4 space-y-3 text-sm sm:text-base max-w-[90ch]" style={{ color: "var(--muted)" }}>
+                  {cs.approach.map((a) => (
+                    <li key={a} className="flex gap-3">
+                      <span
+                        aria-hidden
+                        className="mt-2 h-2 w-2 rounded-full"
+                        style={{ background: "color-mix(in srgb, var(--accent) 70%, transparent)" }}
+                      />
+                      <span>{a}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              {/* End image */}
+              <div className="mt-10">
+                <div
+                  className="relative overflow-hidden rounded-3xl border"
+                  style={{
+                    borderColor: "var(--border)",
+                    background: "color-mix(in srgb, var(--surface) 70%, transparent)",
+                  }}
+                >
+                  <div className="relative aspect-[16/9] w-full">
+                    <Image src={cs.images.end} alt={`${cs.title} — cierre`} fill className="object-cover" />
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
-        </div>
-      </div>
-
-      {/* Approach */}
-      <div className="mt-10">
-        <h3 className="text-xl font-semibold" style={{ color: "var(--text)", fontFamily: "var(--font-work)" }}>
-          Qué hicimos
-        </h3>
-        <ul className="mt-4 space-y-3 text-sm sm:text-base max-w-[90ch]" style={{ color: "var(--muted)" }}>
-          {cs.approach.map((a) => (
-            <li key={a} className="flex gap-3">
-              <span
-                aria-hidden
-                className="mt-2 h-2 w-2 rounded-full"
-                style={{ background: "color-mix(in srgb, var(--accent) 70%, transparent)" }}
-              />
-              <span>{a}</span>
-            </li>
-          ))}
-        </ul>
-      </div>
-
-      {/* End image (full) */}
-      <div className="mt-10">
-        <div
-          className="relative overflow-hidden rounded-3xl border"
-          style={{
-            borderColor: "var(--border)",
-            background: "color-mix(in srgb, var(--surface) 70%, transparent)",
-          }}
-        >
-          <div className="relative aspect-[16/9] w-full">
-            <Image src={cs.images.end} alt={`${cs.title} — cierre`} fill className="object-cover" />
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</Container>
-
+        </Container>
       </section>
 
       {/* CTA FINAL */}
@@ -318,7 +313,8 @@ export default async function CaseStudyPage({ params }: Props) {
                   Te respondemos con próximos pasos claros.
                 </h3>
                 <p className="mt-2 text-sm sm:text-base max-w-[65ch]" style={{ color: "var(--muted)" }}>
-                  Si querés una tienda rápida, limpia y diseñada para vender, coordinamos y definimos un plan de ejecución.
+                  Si querés una tienda rápida, limpia y diseñada para vender, coordinamos y definimos un plan de
+                  ejecución.
                 </p>
               </div>
 
@@ -354,3 +350,4 @@ export default async function CaseStudyPage({ params }: Props) {
     </main>
   );
 }
+

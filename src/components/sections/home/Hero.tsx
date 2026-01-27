@@ -44,8 +44,7 @@ export default function Hero() {
           <div className="max-w-3xl">
             {/* Eyebrow */}
             <p
-              className="text-xs sm:text-sm font-semibold tracking-wide uppercase
-                         opacity-0 animate-[es-fadeUp_0.6s_ease-out_forwards]"
+              className="text-base font-semibold"
               style={{
                 fontFamily: "var(--font-work)",
                 color: "var(--accent-warm)",

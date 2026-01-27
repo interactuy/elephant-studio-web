@@ -327,7 +327,7 @@ export default function Servicios() {
                           color: "#111827",
                         }}
                       >
-                        7–10 días
+                      10 días
                       </span>
                     </div>
                     <p className="mt-1 text-xs" style={{ color: "var(--muted)" }}>

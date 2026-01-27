@@ -99,56 +99,56 @@ const TESTIMONIALS: Testimonial[] = [
   {
     id: "t1",
     quote:
-      "Ordenaron la tienda y el flujo de compra. Pasamos de “funciona” a “convierte” sin perder estética.",
-    name: "Leslie Alexander",
+      "Crearon una tienda online linda y simple con todo lo necesario para ordenar y vender mis productos.",
+    name: "Macarena",
     role: "Fundadora",
     brand: "Maki",
-    initials: "LA",
+    initials: "M",
   },
   {
     id: "t2",
     quote:
-      "La auditoría fue quirúrgica: quick wins claros y un roadmap que realmente se puede ejecutar.",
-    name: "Brenna Goyette",
-    role: "Operaciones",
-    brand: "Too Much Bueno",
-    initials: "BG",
+      "La tienda nos permitió ordenar el negocio y acompañar el crecimiento sin perder ventas ni clientas. Hoy vendemos de forma clara y profesional.",
+    name: "Maria",
+    role: "Fundadora",
+    brand: "Huella Propia",
+    initials: "M",
   },
   {
     id: "t3",
     quote:
-      "Mejoramos velocidad y claridad en checkout. Bajaron dudas y aumentaron cierres con el mismo tráfico.",
-    name: "Leonard Krasner",
-    role: "Growth",
-    brand: "Urufarma",
-    initials: "LK",
+      "La app nos ayudó a ordenar los pedidos y reducir tiempos de espera. Hoy todo pasa por un solo canal y la experiencia es mucho más fluida.",
+    name: "Tomas",
+    role: "Cofundador",
+    brand: "Esquina Cafe",
+    initials: "T",
   },
   {
     id: "t4",
     quote:
-      "Se nota el criterio: decisiones justificadas, implementación prolija y acompañamiento real.",
-    name: "Michael Foster",
-    role: "Director",
-    brand: "Atelier Goods",
-    initials: "MF",
+      "La solución nos permitió centralizar pagos y trabajar con clientes de distintos países de forma simple y segura.",
+    name: "Dayni",
+    role: "Fundadora",
+    brand: "Finacc Vega",
+    initials: "D",
   },
   {
     id: "t5",
     quote:
-      "Nos ayudaron a sostener mejoras mes a mes. Tener prioridades claras cambió la operación.",
-    name: "Lindsay Walton",
-    role: "eCommerce Lead",
-    brand: "Slow Essentials",
-    initials: "LW",
+      "La tienda online refleja la identidad de época: elegancia, claridad y una experiencia acorde a la marca",
+    name: "Mateo",
+    role: "Cofundador",
+    brand: "época",
+    initials: "M",
   },
   {
     id: "t6",
     quote:
-      "Las integraciones quedaron finas y estables. Menos manual, más consistencia post-compra.",
-    name: "Tom Cook",
-    role: "CTO",
-    brand: "Studio Kit",
-    initials: "TC",
+      "La optimización de procesos nos permitió ordenar la operación y vender de forma más eficiente",
+    name: "Federico",
+    role: "Fundador",
+    brand: "RDC MVD",
+    initials: "F",
   },
 ];
 
@@ -215,7 +215,7 @@ function Hero() {
       <Container>
         <div className="max-w-3xl">
           <div
-            className="text-xs font-semibold uppercase tracking-wide"
+            className="text-base font-semibold"
             style={{ color: "color-mix(in srgb, var(--accent-warm) 92%, transparent)" }}
           >
             Nuestro trabajo
@@ -227,11 +227,11 @@ function Hero() {
           >
             Proyectos recientes,
             <br className="hidden sm:block" />
-            hechos para vender.
+            pensados para vender.
           </h1>
 
           <p className="mt-4 text-base sm:text-lg" style={{ color: "var(--muted)" }}>
-            Casos reales. Decisiones claras. Ejecución con criterio.
+            Casos reales. Decisiones claras. Ejecución con criterio, de principio a fin.
           </p>
 
           <div className="mt-7 flex flex-wrap gap-3">
@@ -388,7 +388,7 @@ function Testimonials() {
             {/* wrapper extra para aislar estilos globales */}
             <div className="relative">
               <div
-                className="text-xs font-semibold uppercase tracking-wide"
+                className="text-base font-semibold"
                 style={{
                   color: "color-mix(in srgb, var(--accent-warm) 92%, transparent)",
                 }}
@@ -410,7 +410,7 @@ function Testimonials() {
                 className="mt-4 text-sm sm:text-base max-w-[42ch]"
                 style={{ color: "var(--muted)", position: "static" as const }}
               >
-                Opiniones de clientes con foco en claridad, performance y ejecución.
+                La opinion de nuestros mas recientes clientes. 
               </p>
             </div>
           </div>

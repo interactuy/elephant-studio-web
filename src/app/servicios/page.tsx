@@ -14,7 +14,7 @@ const SERVICES: Service[] = [
     id: "desarrollo",
     title: "Desarrollo eCommerce",
     desc:
-      "Tiendas rápidas y claras, diseñadas para convertir desde el primer día. Trabajamos UX, performance y un checkout sin fricción, con una arquitectura limpia y escalable. Ideal si querés ordenar catálogo, navegación y bases técnicas para vender mejor y sostener crecimiento.",
+      "Diseñamos tiendas online rápidas y claras, pensadas para convertir desde el primer día. UX, performance y checkout sin fricción, con una arquitectura limpia y escalable para vender mejor y crecer con orden.",
     href: "/servicios/desarrollo-ecommerce",
     ui: "checkout",
   },
@@ -22,7 +22,7 @@ const SERVICES: Service[] = [
     id: "auditoria",
     title: "Auditoría",
     desc:
-      "Diagnóstico completo de UX, performance y conversión con un plan de acción priorizado. Identificamos fricciones reales, oportunidades de quick wins y mejoras estructurales. Te llevás un roadmap claro para ejecutar con criterio (sin adivinar) y medir impacto.",
+      "Analizamos UX, performance y conversión para detectar frenos reales y oportunidades claras. Entregamos un plan de acción priorizado con quick wins y un roadmap claro para ejecutar con criterio.",
     href: "/servicios/auditoria",
     ui: "checklist",
   },
@@ -30,7 +30,7 @@ const SERVICES: Service[] = [
     id: "optimizacion",
     title: "Optimización",
     desc:
-      "Mejoras puntuales y medibles en performance, UX y conversión para que la tienda rinda más con el mismo tráfico. Ajustamos secciones, jerarquía, velocidad y puntos de decisión, con foco en reducir fricción y aumentar resultados sin cambiar tu marca.",
+      "Mejoras medibles en performance, UX y conversión para que tu tienda rinda más con el mismo tráfico. Reducimos fricción y optimizamos resultados sin cambiar tu marca.",
     href: "/servicios/optimizacion",
     ui: "chart",
   },
@@ -38,7 +38,7 @@ const SERVICES: Service[] = [
     id: "gestion",
     title: "Gestión",
     desc:
-      "Acompañamiento mensual para ejecutar cambios, iterar y sostener mejoras con ritmo. Priorizamos tareas, implementamos, medimos y volvemos a ajustar. Ideal si necesitás continuidad: un partner que mantenga orden técnico y avance sin depender del día a día.",
+      "Acompañamiento mensual para ejecutar mejoras, iterar cambios y sostener resultados. Orden, seguimiento y avance constante, sin que tengas que estar encima.",
     href: "/servicios/gestion",
     ui: "timeline",
   },
@@ -46,7 +46,7 @@ const SERVICES: Service[] = [
     id: "amedida",
     title: "Soluciones a medida",
     desc:
-      "Integraciones, automatizaciones y desarrollo específico cuando lo estándar no alcanza. Conectamos herramientas, armamos flujos post-compra, sincronizaciones y lógica personalizada. Pensado para negocios que requieren operaciones más finas y procesos consistentes.",
+      "Integraciones, automatizaciones y desarrollo específico cuando lo estándar no alcanza. Conectamos herramientas y armamos flujos a medida para resolver procesos reales con lógica clara y consistente.",
     href: "/servicios/soluciones-a-medida",
     ui: "code",
   },
@@ -416,8 +416,8 @@ function Process() {
         <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {[
             { n: "01", t: "Entender", d: "Contexto, objetivos y fricciones reales del negocio." },
-            { n: "02", t: "Decidir", d: "Priorización con criterio: impacto, esfuerzo y riesgo." },
-            { n: "03", t: "Ejecutar", d: "Implementación prolija: UX, performance y estructura." },
+            { n: "02", t: "Decidir", d: "Priorización con criterio: impacto, esfuerzo y riesgo real." },
+            { n: "03", t: "Ejecutar", d: "Implementación prolija: UX, performance y estructura clara." },
             { n: "04", t: "Medir", d: "Seguimiento y ajuste continuo para sostener resultados." },
           ].map((x) => (
             <div
@@ -461,7 +461,7 @@ function FinalCTA() {
         >
           <div className="flex flex-col gap-6 sm:flex-row sm:items-center sm:justify-between">
             <div className="max-w-xl">
-              <div className="text-xs font-semibold uppercase tracking-wide" style={{ color: "var(--muted)" }}>
+              <div className="text-base font-semibold" style={{ color: "var(--muted)" }}>
                 Contacto
               </div>
               <div
@@ -493,17 +493,17 @@ export default function ServiciosPage() {
       <section className="py-10 sm:py-12">
         <Container>
           <div className="max-w-2xl">
-            <div className="text-xs font-semibold uppercase tracking-wide" style={{ color: "var(--accent-warm)" }}>
+            <div className="text-base font-semibold" style={{ color: "var(--accent-warm)" }}>
               Servicios
             </div>
             <h1
               className="mt-3 text-4xl sm:text-5xl font-semibold tracking-tight"
               style={{ fontFamily: "var(--font-work)", color: "var(--text)" }}
             >
-              Todo lo que necesitás para vender online con criterio.
+              Ecommerce y soluciones digitales.
             </h1>
             <p className="mt-4 text-base sm:text-lg" style={{ color: "var(--muted)" }}>
-              Un servicio por card, con la explicación clara y el soporte visual para entender el enfoque.
+              Un enfoque integral: diseñamos tiendas online, desarrollamos soluciones a medida y optimizamos sistemas digitales para que tu negocio funcione mejor.
             </p>
 
             <div className="mt-7 flex flex-wrap gap-3">

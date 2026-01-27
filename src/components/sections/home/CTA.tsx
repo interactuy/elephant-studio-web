@@ -39,15 +39,17 @@ export default function CTAContacto() {
 
           {/* header */}
           <div className="relative">
-            <p className="text-xs font-semibold uppercase tracking-[0.18em]" style={{ color: "var(--cta-muted)" }}>
+            <p className="text-base font-semibold" style={{ color: "var(--cta-muted)" }}>
               Contacto
             </p>
 
-            <h2 className="mt-4 text-4xl font-semibold tracking-tight sm:text-5xl">Contanos tu proyecto</h2>
+            <h2 className="mt-4 text-4xl font-semibold tracking-tight sm:text-5xl">
+              Contanos tu proyecto
+            </h2>
 
             <div className="mt-6">
               <a
-                href="https://wa.me/59800000000"
+                href="https://wa.me/59895302393"
                 target="_blank"
                 rel="noreferrer"
                 className="inline-flex items-center justify-center rounded-full px-5 py-3 text-sm font-semibold transition"
@@ -67,54 +69,51 @@ export default function CTAContacto() {
             <div className="mt-10 h-px w-full" style={{ background: "var(--cta-divider)" }} aria-hidden />
           </div>
 
-          {/* info grid */}
+          {/* info grid (AJUSTADO: sin min-h y sin mt-auto para evitar separación excesiva) */}
           <div className="relative mt-10 grid gap-10 sm:grid-cols-3">
-            {/* Columna base: link alineado abajo */}
-            <div className="flex min-h-[150px] flex-col">
+            <div className="flex flex-col gap-3">
               <p className="text-sm font-semibold">Mail</p>
-              <p className="mt-3 text-sm leading-6" style={{ color: "var(--cta-muted)" }}>
+              <p className="text-sm leading-6" style={{ color: "var(--cta-muted)" }}>
                 Escribinos y te respondemos rápido.
               </p>
               <a
-                href="mailto:hola@elephant.studio"
-                className="mt-auto inline-block pt-6 text-sm font-semibold"
+                href="mailto:hola@interact.com.uy"
+                className="pt-2 text-sm font-semibold"
                 style={{ color: "var(--cta-link)" }}
               >
-                hola@elephant.studio
+                hola@interact.com.uy
               </a>
             </div>
 
-            <div className="flex min-h-[150px] flex-col">
+            <div className="flex flex-col gap-3">
               <p className="text-sm font-semibold">WhatsApp</p>
-              <p className="mt-3 text-sm leading-6" style={{ color: "var(--cta-muted)" }}>
+              <p className="text-sm leading-6" style={{ color: "var(--cta-muted)" }}>
                 Para coordinar, estimar alcance y tiempos.
               </p>
               <a
-                href="https://wa.me/59800000000"
+                href="https://wa.me/59895302393"
                 target="_blank"
                 rel="noreferrer"
-                className="mt-auto inline-block pt-6 text-sm font-semibold"
+                className="pt-2 text-sm font-semibold"
                 style={{ color: "var(--cta-link)" }}
               >
-                +598 00 000 000
+                +598 95 302 393
               </a>
             </div>
 
-            <div className="flex min-h-[150px] flex-col">
+            <div className="flex flex-col gap-3">
               <p className="text-sm font-semibold">Dirección</p>
-              <p className="mt-3 text-sm leading-6" style={{ color: "var(--cta-muted)" }}>
-                Montevideo, Uruguay
-                <br />
-                (reuniones con agenda)
+              <p className="text-sm leading-6" style={{ color: "var(--cta-muted)" }}>
+                Reuniones con agenda.
               </p>
               <a
-                href="https://maps.google.com/?q=Montevideo%20Uruguay"
+                href="https://maps.app.goo.gl/16gNMUmY5EnKRSRaA"
                 target="_blank"
                 rel="noreferrer"
-                className="mt-auto inline-block pt-6 text-sm font-semibold"
+                className="pt-2 text-sm font-semibold"
                 style={{ color: "var(--cta-link)" }}
               >
-                Ver en Maps
+                World Trade Center Torre 3 Piso 12
               </a>
             </div>
           </div>

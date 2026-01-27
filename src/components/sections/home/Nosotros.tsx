@@ -17,7 +17,7 @@ export default function NosotrosHome() {
             {/* Left: copy */}
             <div className="p-8 sm:p-10 lg:p-12">
               <div
-                className="text-xs font-semibold tracking-wide"
+                className="text-base font-semibold"
                 style={{
                   color:
                     "color-mix(in srgb, var(--accent-warm) 92%, transparent)",
