@@ -163,7 +163,7 @@ export const CASES: CaseStudy[] = [
     ],
     images: {
       cover: "/work/cases/cosplay-portada.png",
-      mid: "/placeholders/cases/case-11.jpg",
+      mid: "/work/cases/cosplay-detalle.png",
       end: "/placeholders/cases/case-12.jpg",
     },
   },
