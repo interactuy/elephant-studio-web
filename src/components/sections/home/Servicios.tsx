@@ -5,23 +5,23 @@ import React from "react";
 const services = {
   dev: {
     title: "Desarrollo eCommerce",
-    desc: "Tiendas rápidas y claras, diseñadas para convertir. UX, performance y checkout sin fricción.",
+    desc: "Diseñamos tiendas online rápidas y claras, pensadas para convertir y vender sin fricción desde el primer día.",
   },
   custom: {
     title: "Soluciones a medida",
-    desc: "Integraciones, automatizaciones y desarrollo específico cuando lo estándar no alcanza.",
+    desc: "Desarrollos a medida, integraciones y automatizaciones cuando las soluciones estándar no alcanzan.",
   },
   opt: {
     title: "Optimización",
-    desc: "Performance, UX y conversión para que tu tienda rinda más con el mismo tráfico.",
+    desc: "Mejoramos performance, UX y conversión para que tu tienda rinda más con el mismo tráfico.",
   },
   audit: {
     title: "Auditoría",
-    desc: "Diagnóstico completo de UX, performance y conversión con un plan de acción priorizado.",
+    desc: "Analizamos tu tienda para detectar frenos de conversión y oportunidades claras, con un plan de acción priorizado.",
   },
   mgmt: {
     title: "Gestión",
-    desc: "Acompañamiento mensual para ejecutar cambios, iterar y sostener mejoras con ritmo.",
+    desc: "Acompañamiento mensual para implementar mejoras, iterar cambios y sostener resultados en el tiempo.",
   },
 };
 
@@ -119,12 +119,11 @@ export default function Servicios() {
             className="mt-2 text-4xl font-semibold tracking-tight text-balance sm:text-5xl"
             style={{ color: "var(--text)" }}
           >
-            Todo lo que necesitás para vender online con criterio.
+            Ecommerce y soluciones digitales.
           </h2>
 
           <p className="mt-4 text-base leading-relaxed">
-            Un enfoque integral: construir, personalizar, optimizar, auditar y
-            gestionar tu eCommerce.
+            Un enfoque integral: diseñamos tiendas online, desarrollamos soluciones a medida y optimizamos sistemas digitales para que tu negocio funcione mejor.
           </p>
         </div>
 

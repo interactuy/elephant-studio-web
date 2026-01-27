@@ -52,7 +52,7 @@ export default function Hero() {
                 animationDelay: "0.1s",
               }}
             >
-              Ecommerce + soluciones digitales para pymes
+              ECOMMERCE & SOLUCIONES DIGITALES PARA PYMES
             </p>
 
             {/* Título */}
@@ -64,9 +64,7 @@ export default function Hero() {
                 animationDelay: "0.2s",
               }}
             >
-              Vendé online con orden,
-              <br />
-              claridad y soporte real.
+              Ecommerce para vender.
             </h1>
 
             {/* Descripción */}
@@ -75,8 +73,7 @@ export default function Hero() {
                          opacity-0 animate-[es-fadeUp_0.6s_ease-out_forwards]"
               style={{ animationDelay: "0.3s" }}
             >
-              Diseñamos, desarrollamos e integramos lo necesario para que tu tienda
-              funcione rápido, convierta mejor y sea fácil de mantener.
+              Desarrollamos tiendas online y soluciones digitales para pymes, claras, rápidas y fáciles de gestionar, con soporte real cuando lo necesitás.
             </p>
 
             {/* CTAs */}

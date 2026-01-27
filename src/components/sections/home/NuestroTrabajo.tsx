@@ -53,18 +53,18 @@ export default function NuestroTrabajoSimple() {
         {/* Header */}
         <div className="max-w-2xl">
           <p className="text-base font-semibold" style={{ color: "var(--accent-warm)" }}>
-            Nuestro trabajo
+            Nuestro Trabajo
           </p>
 
           <h2
             className="mt-2 text-4xl font-semibold tracking-tight text-balance sm:text-5xl"
             style={{ color: "var(--text)" }}
           >
-            Proyectos recientes, hechos para vender.
+            Proyectos recientes, pensados para vender.
           </h2>
 
           <p className="mt-4 text-base leading-relaxed" style={{ color: "var(--muted)" }}>
-            Casos reales. Decisiones claras. Ejecución con criterio.
+            Casos reales. Decisiones claras. Ejecución con criterio, de principio a fin.
           </p>
         </div>
 

@@ -18,19 +18,18 @@ export default function Confianza() {
             className="text-base font-semibold"
             style={{ color: "var(--accent-warm)" }}
           >
-            Confianza
+            Nuestro Enfoque
           </p>
 
           <h2
             className="mt-3 text-4xl font-semibold tracking-tight text-balance sm:text-5xl"
             style={{ color: "var(--text)" }}
           >
-            Claridad, seguridad y cercanía para sostener tu eCommerce.
+            Claridad, seguridad y cercanía.
           </h2>
 
           <p className="mt-5 text-base leading-relaxed" style={{ color: "var(--muted)" }}>
-            Trabajamos con procesos visibles, decisiones respaldadas y acompañamiento real. Sin humo, sin
-            promesas vacías: criterio y ejecución.
+            Trabajamos con procesos visibles, decisiones respaldadas y acompañamiento real. Sin humo ni promesas vacías: criterio y ejecución.
           </p>
         </div>
 
@@ -53,7 +52,7 @@ export default function Confianza() {
                 </p>
 
                 <p className="mt-4 text-sm font-semibold" style={{ color: "color-mix(in srgb, var(--text) 85%, transparent)" }}>
-                  Qué se hace y cuándo
+                  Qué se hace y cuándo, sin sorpresas.
                 </p>
 
                 <p className="mt-3 text-sm leading-6" style={{ color: "var(--muted)" }}>
@@ -91,8 +90,7 @@ export default function Confianza() {
                 </p>
 
                 <p className="mt-3 text-sm leading-6" style={{ color: "rgba(255,255,255,0.62)" }}>
-                  Performance, UX y conversión medidos antes y después. Cambios con justificación, no con
-                  intuición.
+                  Performance, UX y conversión medidos antes y después. Decisiones con justificación, no con intuición.
                 </p>
 
                 {/* Mini “stats” sin pills (solo bloques discretos, como apoyo visual) */}
@@ -148,13 +146,12 @@ export default function Confianza() {
                 </p>
 
                 <p className="mt-3 text-sm leading-6" style={{ color: "rgba(255,255,255,0.62)" }}>
-                  Comunicación directa, seguimiento constante y decisiones compartidas. No estás “solo con la
-                  tienda”.
+                  Comunicación directa, seguimiento constante y decisiones compartidas. No estás solo con la tienda.
                 </p>
 
                 {/* Sin pills: lista simple, limpia */}
                 <ul className="mt-8 space-y-3 text-sm" style={{ color: "rgba(255,255,255,0.72)" }}>
-                  {["Respuesta rápida", "Check-ins", "Prioridades claras", "Iteración continua"].map((t) => (
+                  {["Comunicación agil y directa.", "Seguimiento y priodridades claras."].map((t) => (
                     <li key={t} className="flex items-start gap-3">
                       <span
                         className="mt-2 h-1.5 w-1.5 rounded-full"
