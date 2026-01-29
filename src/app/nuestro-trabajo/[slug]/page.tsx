@@ -45,10 +45,7 @@ export default async function CaseStudyPage({ params }: Props) {
                 {cs.title}
               </h1>
 
-              <p
-                className="mt-4 text-base sm:text-lg max-w-[60ch]"
-                style={{ color: "var(--muted)" }}
-              >
+              <p className="mt-4 text-base sm:text-lg max-w-[60ch]" style={{ color: "var(--muted)" }}>
                 {cs.summary}
               </p>
 
@@ -135,7 +132,7 @@ export default async function CaseStudyPage({ params }: Props) {
               </div>
 
               <div className="mt-4 text-xs" style={{ color: "var(--muted)" }}>
-               {/* Metricas de referencia iba aca*/}
+                {/* Metricas de referencia iba aca*/}
               </div>
             </div>
           </div>
@@ -152,8 +149,15 @@ export default async function CaseStudyPage({ params }: Props) {
               background: "color-mix(in srgb, var(--surface) 70%, transparent)",
             }}
           >
-            <div className="relative aspect-[16/8] w-full">
-              <Image src={cs.images.cover} alt={`${cs.title} — portada`} fill priority className="object-cover" />
+            {/* ✅ Más vertical en mobile */}
+            <div className="relative aspect-[4/5] sm:aspect-[16/8] w-full">
+              <Image
+                src={cs.images.cover}
+                alt={`${cs.title} — portada`}
+                fill
+                priority
+                className="object-cover"
+              />
             </div>
 
             <div
@@ -180,7 +184,7 @@ export default async function CaseStudyPage({ params }: Props) {
                 Contexto y enfoque
               </h2>
 
-              {/* ✅ AHORA VIENE DESDE cases.ts */}
+              {/* ✅ VIENE DESDE cases.ts */}
               <div
                 className="mt-5 space-y-4 text-sm sm:text-base max-w-[80ch]"
                 style={{ color: "var(--muted)" }}
@@ -190,8 +194,9 @@ export default async function CaseStudyPage({ params }: Props) {
                 ))}
               </div>
 
-              {/* Desafío / Resultados */}
+              {/* ✅ Desafíos / Qué hicimos (antes: Desafío / Resultados) */}
               <div className="mt-10 grid gap-6 lg:grid-cols-2">
+                {/* Desafíos */}
                 <div
                   className="rounded-2xl border p-6"
                   style={{
@@ -199,14 +204,18 @@ export default async function CaseStudyPage({ params }: Props) {
                     background: "color-mix(in srgb, var(--surface) 80%, transparent)",
                   }}
                 >
-                  <div className="text-xs font-semibold uppercase tracking-wide" style={{ color: "var(--muted)" }}>
-                    Desafío
+                  <div
+                    className="text-xs font-semibold uppercase tracking-wide"
+                    style={{ color: "var(--muted)" }}
+                  >
+                    Desafíos
                   </div>
                   <p className="mt-3 text-sm sm:text-base" style={{ color: "var(--text)" }}>
                     {cs.challenge}
                   </p>
                 </div>
 
+                {/* Qué hicimos */}
                 <div
                   className="rounded-2xl border p-6"
                   style={{
@@ -214,12 +223,16 @@ export default async function CaseStudyPage({ params }: Props) {
                     background: "color-mix(in srgb, var(--surface) 80%, transparent)",
                   }}
                 >
-                  <div className="text-xs font-semibold uppercase tracking-wide" style={{ color: "var(--muted)" }}>
-                    Resultados
+                  <div
+                    className="text-xs font-semibold uppercase tracking-wide"
+                    style={{ color: "var(--muted)" }}
+                  >
+                    Qué hicimos
                   </div>
+
                   <ul className="mt-3 space-y-2 text-sm sm:text-base" style={{ color: "var(--text)" }}>
-                    {cs.outcome.map((o) => (
-                      <li key={o} className="flex gap-2">
+                    {cs.approach.map((a) => (
+                      <li key={a} className="flex gap-2">
                         <span
                           aria-hidden
                           className="mt-2 h-1.5 w-1.5 rounded-full"
@@ -227,14 +240,96 @@ export default async function CaseStudyPage({ params }: Props) {
                             background: "color-mix(in srgb, var(--accent-warm) 80%, transparent)",
                           }}
                         />
-                        <span>{o}</span>
+                        <span>{a}</span>
                       </li>
                     ))}
                   </ul>
                 </div>
               </div>
 
-              {/* Mid image */}
+              {/* ✅ Resultados al lado de la imagen mid (layout tipo “Nosotros”) */}
+              {/* ✅ Resultados al lado de la imagen mid (más alto + mobile sin recorte) */}
+<div className="mt-10">
+  <div
+    className="relative overflow-hidden rounded-3xl border"
+    style={{
+      borderColor: "var(--border)",
+      background: "color-mix(in srgb, var(--surface) 70%, transparent)",
+    }}
+  >
+    {/* ✅ Más alto en general, y MUCHO más alto en desktop (tipo ejemplo "Nosotros") */}
+    <div className="grid lg:grid-cols-2 lg:min-h-[520px] xl:min-h-[560px]">
+      {/* Left: Resultados */}
+      <div className="p-7 sm:p-9 lg:p-12">
+        <div
+          className="text-xs font-semibold uppercase tracking-wide"
+          style={{ color: "var(--muted)" }}
+        >
+          Resultados
+        </div>
+
+        <h3
+          className="mt-3 text-2xl sm:text-3xl font-semibold tracking-tight leading-[1.05]"
+          style={{ color: "var(--text)", fontFamily: "var(--font-work)" }}
+        >
+          Trabajo real. Resultados claros.
+        </h3>
+
+        <ul className="mt-6 space-y-2 text-sm sm:text-base" style={{ color: "var(--text)" }}>
+          {cs.outcome.map((o) => (
+            <li key={o} className="flex gap-2">
+              <span
+                aria-hidden
+                className="mt-2 h-1.5 w-1.5 rounded-full"
+                style={{
+                  background: "color-mix(in srgb, var(--accent-warm) 80%, transparent)",
+                }}
+              />
+              <span>{o}</span>
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      {/* Right: Mid image */}
+      <div
+        className="relative"
+        style={{
+          background:
+            "linear-gradient(135deg, color-mix(in srgb, var(--bg) 86%, transparent), color-mix(in srgb, var(--surface) 86%, transparent))",
+        }}
+      >
+        {/* 
+          ✅ MOBILE: altura fija para que se parezca más al ejemplo, y object-contain para no recortar
+          ✅ DESKTOP: ocupa todo (h-full) y object-cover para look editorial
+        */}
+        <div className="relative h-[420px] sm:h-[460px] lg:h-full w-full">
+          <Image
+            src={cs.images.mid}
+            alt={`${cs.title} — detalle`}
+            fill
+            className="object-contain sm:object-cover"
+            sizes="(min-width: 1024px) 50vw, 100vw"
+          />
+
+          {/* overlay sutil para que quede premium */}
+          <div
+            aria-hidden
+            className="pointer-events-none absolute inset-0"
+            style={{
+              background:
+                "radial-gradient(1200px 500px at 70% 40%, rgba(0,0,0,0.08), rgba(0,0,0,0) 55%)",
+              opacity: 0.6,
+            }}
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+              {/* ✅ End media: ahora es VIDEO (no imagen) */}
               <div className="mt-10">
                 <div
                   className="relative overflow-hidden rounded-3xl border"
@@ -243,48 +338,32 @@ export default async function CaseStudyPage({ params }: Props) {
                     background: "color-mix(in srgb, var(--surface) 70%, transparent)",
                   }}
                 >
-                  <div className="relative aspect-[16/9] w-full">
-                    <Image src={cs.images.mid} alt={`${cs.title} — detalle`} fill className="object-cover" />
+                  {/* ✅ Más vertical en mobile */}
+                  <div className="relative aspect-[4/5] sm:aspect-[16/9] w-full">
+                    <video
+                      className="h-full w-full object-cover"
+                      autoPlay
+                      muted
+                      loop
+                      playsInline
+                      preload="metadata"
+                    >
+                      <source src={cs.images.end} type="video/mp4" />
+                    </video>
+
+                    <div
+                      aria-hidden
+                      className="pointer-events-none absolute inset-0"
+                      style={{
+                        background:
+                          "linear-gradient(180deg, rgba(0,0,0,0.00) 0%, rgba(0,0,0,0.06) 70%, rgba(0,0,0,0.10) 100%)",
+                      }}
+                    />
                   </div>
                 </div>
               </div>
 
-              {/* Approach */}
-              <div className="mt-10">
-                <h3
-                  className="text-xl font-semibold"
-                  style={{ color: "var(--text)", fontFamily: "var(--font-work)" }}
-                >
-                  Qué hicimos
-                </h3>
-                <ul className="mt-4 space-y-3 text-sm sm:text-base max-w-[90ch]" style={{ color: "var(--muted)" }}>
-                  {cs.approach.map((a) => (
-                    <li key={a} className="flex gap-3">
-                      <span
-                        aria-hidden
-                        className="mt-2 h-2 w-2 rounded-full"
-                        style={{ background: "color-mix(in srgb, var(--accent) 70%, transparent)" }}
-                      />
-                      <span>{a}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-
-              {/* End image */}
-              <div className="mt-10">
-                <div
-                  className="relative overflow-hidden rounded-3xl border"
-                  style={{
-                    borderColor: "var(--border)",
-                    background: "color-mix(in srgb, var(--surface) 70%, transparent)",
-                  }}
-                >
-                  <div className="relative aspect-[16/9] w-full">
-                    <Image src={cs.images.end} alt={`${cs.title} — cierre`} fill className="object-cover" />
-                  </div>
-                </div>
-              </div>
+              {/* (no tocamos nada más) */}
             </div>
           </div>
         </Container>
@@ -350,4 +429,3 @@ export default async function CaseStudyPage({ params }: Props) {
     </main>
   );
 }
-

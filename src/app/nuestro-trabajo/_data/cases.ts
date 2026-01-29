@@ -61,8 +61,8 @@ export const CASES: CaseStudy[] = [
     ],
     images: {
       cover: "/work/cases/tmb-portada.png",
-      mid: "/placeholders/cases/case-02.jpg",
-      end: "/placeholders/cases/case-03.jpg",
+      mid: "/work/cases/tmb-detalle.png",
+      end: "/work/cases/tmb-end.mp4",
     },
   },
 
@@ -100,8 +100,8 @@ export const CASES: CaseStudy[] = [
     ],
     images: {
       cover: "/work/cases/maki-portada.png",
-      mid: "/work/cases/maki-detalle.png",
-      end: "/work/cases/maki-cierre.png",
+      mid: "/work/cases/maki-detalle1.png",
+      end: "/work/cases/maki-end.mp4",
     },
   },
 
@@ -175,8 +175,8 @@ export const CASES: CaseStudy[] = [
     ],
     images: {
       cover: "/work/cases/cosplay-portada.png",
-      mid: "/work/cases/cosplay-deta.png",
-      end: "/placeholders/cases/case-12.jpg",
+      mid: "/work/cases/cosplay-detalle3.png",
+      end: "/work/cases/cosplay-end.mp4",
     },
   },
 
@@ -258,33 +258,38 @@ export const CASES: CaseStudy[] = [
     client: "Huella Propia",
     category: "Desarrollo Ecommerce",
     summary:
-      "Creación de tienda online para ordenar ventas, reforzar confianza y acompañar un momento clave de expansión.",
-    serviceTags: ["Shopify", "UX", "Checkout", "Confianza"],
+      "Optimización de tienda online para una joyería artesanal en un momento crítico de crecimiento, enfocada en ordenar el proceso de venta, reforzar la confianza y evitar la pérdida de pedidos.",
+    serviceTags: [],
     highlights: [
-      { label: "Orden", value: "↑" },
-      { label: "Confianza", value: "↑" },
-      { label: "Fricción", value: "↓" },
+      { label: "Gestion", value: "Mas clara" },
+      { label: "Canal de venta", value: "Profesionalizado" },
+      { label: "Catalogo", value: "100% Digitalizado" },
     ],
     context: [
-      "El negocio crecía y el canal de venta ya no acompañaba el volumen de consultas.",
-      "El foco estuvo en profesionalizar la experiencia sin perder cercanía con las clientas.",
+      "Huella Propia es una joyería artesanal con una base de clientas fiel, pero con un volumen de consultas y pedidos que había empezado a desbordar la venta por mensajes directos.",
+      "El sitio debía cumplir un rol claro: ordenar la venta, transmitir confianza y sostener el crecimiento, sin perder el carácter artesanal de la marca.",
     ],
     challenge:
-      "Transmitir seguridad y orden en los momentos clave de la compra.",
+      "El negocio se encontraba en un punto sensible de expansión. La venta por Instagram generaba confusión, pedidos duplicados y fricción en la coordinación de pagos y entregas. El desafío fue transformar ese interés en un proceso claro, profesional y confiable, tanto para la marca como para sus clientas.",
     approach: [
-      "Diseño de tienda clara y confiable.",
-      "Refuerzo de señales de confianza.",
-      "Optimización de checkout.",
+      "Desarrollo y optimización de tienda online.",
+      "Reorganización del catálogo y jerarquía de productos.",
+      "Mejora del flujo de compra para reducir dudas.",
+      "Refuerzo de señales de confianza en puntos críticos.",
+      "Ajustes de checkout para simplificar el cierre de la compra.",
+      "Acompañamiento inicial y capacitación para la gestión diaria.",
+
     ],
     outcome: [
-      "Menos dudas en la compra.",
-      "Proceso más claro.",
-      "Base sólida para escalar.",
+      "Menos fricción en el proceso de compra.",
+      "Mayor claridad para las clientas al momento de elegir y pagar.",
+      "Pedidos más ordenados y fáciles de gestionar.",
+      "Base estable para seguir creciendo sin perder control.",
     ],
     images: {
       cover: "/work/cases/huella-portada.png",
-      mid: "/placeholders/cases/case-23.jpg",
-      end: "/placeholders/cases/case-24.jpg",
+      mid: "/work/cases/huella-detalle.png",
+      end: "/work/cases/huella-end.mp4",
     },
   },
 ];
