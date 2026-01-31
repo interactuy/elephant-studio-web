@@ -26,7 +26,7 @@ const WORKS: Work[] = [
     title: "Too Much Bueno",
     client: "Too Much Bueno",
     tag: "Desarrollo eCommerce",
-    desc: "Tienda online internacional. Arquitectura, UX y performance orientadas a conversión.",
+    desc: "Desarrollo de tienda online desde cero para ordenar la demanda, facilitar la exploración del catálogo y profesionalizar el canal digital de un emprendimiento gastronómico en crecimiento radicado en Miami.",
     href: "/nuestro-trabajo/too-much-bueno",
     imageUrl: "/work/cases/tmb-portada.png",
   },
@@ -35,25 +35,25 @@ const WORKS: Work[] = [
     title: "Maki",
     client: "Maki",
     tag: "Desarrollo eCommerce",
-    desc: "Tienda desde cero. Estructura de catálogo y navegación limpia para escalar.",
+    desc: "Diseño y construcción de tienda online para ordenar ventas, profesionalizar el canal digital y acompañar el crecimiento desde Instagram hacia un eCommerce propio.",
     href: "/nuestro-trabajo/maki",
     imageUrl: "/work/cases/maki-portada.png",
   },
   {
-    id: "urufarma",
-    title: "Urufarma",
-    client: "Urufarma",
-    tag: "Optimización",
-    desc: "Mejoras de performance, UX y señales de confianza para cerrar más rápido.",
-    href: "/nuestro-trabajo/urufarma",
-    imageUrl: "/work/cases/urufarma-portada.png",
+    id: "elvani",
+    title: "Elvani",
+    client: "Elvani",
+    tag: "Desarrollo Ecommerce",
+    desc: "Desarrollo de tienda online y solución a medida para una marca de muebles, integrando un sistema inteligente de cotización para piezas fabricadas a pedido.",
+    href: "/nuestro-trabajo/elvani",
+    imageUrl: "/work/cases/elvani-portada1.png",
   },
   {
     id: "cosplay",
     title: "Cosplay Anime Store",
     client: "Cosplay",
     tag: "Checkout & UX",
-    desc: "Checkout más claro y menos fricción. Ajustes de jerarquía y microinteracciones.",
+    desc: "Desarrollo de tienda online desde cero para digitalizar catálogo, ordenar la experiencia de compra y convertir el sitio en una herramienta real de expansión y alcance.",
     href: "/nuestro-trabajo/cosplay",
     imageUrl: "/work/cases/cosplay-portada.png",
   },
@@ -62,7 +62,7 @@ const WORKS: Work[] = [
     title: "epoca",
     client: "epoca",
     tag: "Desarrollo Ecommerce",
-    desc: "Auditoría completa con roadmap priorizado y quick wins para ejecutar.",
+    desc: "Desarrollo de tienda online desde cero para una marca de indumentaria clásica y elegante en Estados Unidos, cuidando la estética, la experiencia y un sistema de venta alineado al nivel de la marca.",
     href: "/nuestro-trabajo/epoca",
     imageUrl: "/work/cases/epoca-portada.png",
   },
@@ -71,7 +71,7 @@ const WORKS: Work[] = [
     title: "Huella Propia",
     client: "Huella Propia",
     tag: "Desarrollo Ecommerce",
-    desc: "Landing y PDP con foco en claridad: mejor lectura, mejor decisión.",
+    desc: "Optimización de tienda online para una joyería artesanal en un momento crítico de crecimiento, enfocada en ordenar el proceso de venta, reforzar la confianza y evitar la pérdida de pedidos.",
     href: "/nuestro-trabajo/huella-propia",
     imageUrl: "/work/cases/huella-portada.png",
   },
@@ -324,6 +324,67 @@ function WorksGrid() {
   );
 }
 
+function LogosConfianza() {
+  const LOGOS = [
+    { id: "l1", alt: "Logo 1", src: "/work/logos/logourufarma.png" },
+    { id: "l2", alt: "Logo 2", src: "/work/logos/logo-2.png" },
+    { id: "l3", alt: "Logo 3", src: "/work/logos/logo-3.png" },
+    { id: "l4", alt: "Logo 4", src: "/work/logos/logo-4.png" },
+  ];
+
+  return (
+    <section className="py-10 sm:py-12">
+      <Container>
+        <div
+          className="rounded-3xl border px-6 py-10 sm:px-10"
+          style={{
+            borderColor: "var(--border)",
+            background: "color-mix(in srgb, var(--surface) 78%, transparent)",
+            boxShadow: "0 18px 70px rgba(0,0,0,0.08)",
+          }}
+        >
+          <div className="max-w-2xl">
+            <div
+              className="text-base font-semibold"
+              style={{
+                color: "color-mix(in srgb, var(--accent-warm) 92%, transparent)",
+              }}
+            >
+              Ellos también confían en nosotros
+            </div>
+
+            <p className="mt-2 text-sm sm:text-base" style={{ color: "var(--muted)" }}>
+              Marcas y proyectos con los que trabajamos en distintas etapas: desarrollo, optimización y soluciones a medida.
+            </p>
+          </div>
+
+          <div className="mt-8 grid grid-cols-2 gap-4 sm:grid-cols-4 sm:gap-6">
+            {LOGOS.map((l) => (
+              <div
+                key={l.id}
+                className="flex items-center justify-center rounded-2xl border px-4 py-6"
+                style={{
+                  borderColor: "var(--border)",
+                  background: "color-mix(in srgb, var(--bg) 55%, transparent)",
+                }}
+              >
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src={l.src}
+                  alt={l.alt}
+                  className="h-10 sm:h-11 w-auto object-contain"
+                  style={{ filter: "saturate(0.95) contrast(1.02)" }}
+                  loading="lazy"
+                />
+              </div>
+            ))}
+          </div>
+        </div>
+      </Container>
+    </section>
+  );
+}
+
 /* ---------------------------
    Testimonials (UPDATED)
    - Title left
@@ -474,6 +535,7 @@ export default function NuestroTrabajoPage() {
     <main className="pt-0">
       <Hero />
       <WorksGrid />
+      <LogosConfianza />
       <Testimonials />
       <FinalCTA />
     </main>
