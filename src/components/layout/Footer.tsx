@@ -7,9 +7,9 @@ type LinkItem = { label: string; href: string };
 const NAV: LinkItem[] = [
   { label: "Inicio", href: "/" },
   { label: "Servicios", href: "/#servicios" },
-  { label: "Trabajo", href: "/#trabajo" },
+  { label: "Trabajo", href: "/nuestro-trabajo" },
   { label: "Nosotros", href: "/nosotros" },
-  { label: "Contacto", href: "/#contacto" },
+  { label: "Contacto", href: "/contacto" },
 ];
 
 const LEGAL: LinkItem[] = [
@@ -50,13 +50,13 @@ export default function Footer() {
           {/* Right: contact */}
           <div className="text-sm">
             <a
-              href="mailto:hola@elephant.studio"
+              href="mailto:hola@interact.com.uy"
               className="transition"
               style={{ color: "var(--muted)" }}
               onMouseEnter={(e) => (e.currentTarget.style.color = "var(--text)")}
               onMouseLeave={(e) => (e.currentTarget.style.color = "var(--muted)")}
             >
-              hola@elephant.studio
+              hola@interact.com.uy
             </a>
           </div>
         </div>
@@ -67,7 +67,7 @@ export default function Footer() {
           style={{ borderTop: "1px solid var(--border)" }}
         >
           <p style={{ color: "var(--muted)" }}>
-            © {year} Elephant Studio. Todos los derechos reservados.
+            © {year} Interact Studio. Todos los derechos reservados.
           </p>
 
           <div className="flex flex-wrap items-center gap-x-4 gap-y-2">

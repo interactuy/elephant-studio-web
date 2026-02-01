@@ -25,7 +25,7 @@ const WORKS: Work[] = [
     id: "tmb",
     title: "Too Much Bueno",
     client: "Too Much Bueno",
-    tag: "Desarrollo eCommerce",
+    tag: "Desarrollo Ecommerce",
     desc: "Desarrollo de tienda online desde cero para ordenar la demanda, facilitar la exploración del catálogo y profesionalizar el canal digital de un emprendimiento gastronómico en crecimiento radicado en Miami.",
     href: "/nuestro-trabajo/too-much-bueno",
     imageUrl: "/work/cases/tmb-portada.png",
@@ -34,7 +34,7 @@ const WORKS: Work[] = [
     id: "maki",
     title: "Maki",
     client: "Maki",
-    tag: "Desarrollo eCommerce",
+    tag: "Desarrollo Ecommerce",
     desc: "Diseño y construcción de tienda online para ordenar ventas, profesionalizar el canal digital y acompañar el crecimiento desde Instagram hacia un eCommerce propio.",
     href: "/nuestro-trabajo/maki",
     imageUrl: "/work/cases/maki-portada.png",
@@ -52,7 +52,7 @@ const WORKS: Work[] = [
     id: "cosplay",
     title: "Cosplay Anime Store",
     client: "Cosplay",
-    tag: "Checkout & UX",
+    tag: "Desarrollo Ecommerce",
     desc: "Desarrollo de tienda online desde cero para digitalizar catálogo, ordenar la experiencia de compra y convertir el sitio en una herramienta real de expansión y alcance.",
     href: "/nuestro-trabajo/cosplay",
     imageUrl: "/work/cases/cosplay-portada.png",
@@ -80,7 +80,7 @@ const WORKS: Work[] = [
     title: "Finacc Vega",
     client: "Finacc Vega",
     tag: "Soluciones a medida",
-    desc: "Sistema de pagos web para venta de servicios y suscripciones recurrentes.",
+    desc: "Desarrollo de una solución a medida para una empresa de asesoramiento contable y construcción de crédito en Estados Unidos, permitiendo la contratación de servicios y cobro a distancia desde cualquier parte del mundo.",
     href: "/nuestro-trabajo/finacc-vega",
     imageUrl: "/work/cases/finaccvega-portada.png",
   },
@@ -89,7 +89,7 @@ const WORKS: Work[] = [
     title: "Esquina Cafe",
     client: "Esquina Cafe",
     tag: "Soluciones a Medida",
-    desc: "Desarrollo de una solucion a medida para pedidos a distancia.",
+    desc: "Desarrollo de una solución a medida para que los clientes puedan comprar desde una app web y retirar en el local, reduciendo filas y ordenando la operación diaria de un café en Buenos Aires.",
     href: "/nuestro-trabajo/esquina-cafe",
     imageUrl: "/work/cases/esquinacafe-portada.png",
   },
@@ -327,9 +327,9 @@ function WorksGrid() {
 function LogosConfianza() {
   const LOGOS = [
     { id: "l1", alt: "Logo 1", src: "/work/logos/logourufarma.png" },
-    { id: "l2", alt: "Logo 2", src: "/work/logos/logo-2.png" },
-    { id: "l3", alt: "Logo 3", src: "/work/logos/logo-3.png" },
-    { id: "l4", alt: "Logo 4", src: "/work/logos/logo-4.png" },
+    { id: "l2", alt: "Logo 2", src: "/work/logos/elevenkhas.png" },
+    { id: "l3", alt: "Logo 3", src: "/work/logos/RDCMVD1.png" },
+    { id: "l4", alt: "Logo 4", src: "/work/logos/Prism1.png" },
   ];
 
   return (

@@ -224,33 +224,33 @@ export const CASES: CaseStudy[] = [
     client: "Esquina Café",
     category: "Soluciones a medida",
     summary:
-      "Desarrollo de una app web para centralizar pedidos, reducir filas y ordenar la operación diaria del local.",
-    serviceTags: ["Web App", "Pedidos", "Operación", "UX"],
+      "Desarrollo de una solución a medida para que los clientes puedan comprar desde una app web y retirar en el local, reduciendo filas y ordenando la operación diaria de un café en Buenos Aires.",
+    serviceTags: [],
     highlights: [
       { label: "Pedidos", value: "Centralizados" },
       { label: "Filas", value: "↓" },
-      { label: "Canal", value: "Único" },
+      { label: "Experiencia", value: "Fluida" },
     ],
     context: [
-      "El crecimiento del flujo de clientes generaba filas y desorden en la toma de pedidos.",
-      "La solución buscó concentrar todo en un solo canal y mejorar la experiencia sin complicar la operación.",
+      "Esquina Café es un café de especialidad con alto flujo de clientes en determinados horarios. La experiencia en el mostrador funcionaba, pero las filas y la gestión manual de pedidos empezaban a generar fricción tanto para el equipo como para los clientes.",
+      "El objetivo fue claro: agilizar la compra, ordenar la operación y mejorar la experiencia dentro del local, sin perder el trato cercano propio del café.",
     ],
     challenge:
-      "Reducir tiempos de espera y ordenar pedidos sin frenar el ritmo del local.",
+      "Reducir tiempos de espera y centralizar pedidos en un solo canal, evitando errores, desorden y cuellos de botella en horas pico. La solución debía ser simple de usar para el cliente y fácil de gestionar para el equipo del local.",
     approach: [
-      "Diseño y desarrollo de app web de pedidos.",
-      "Flujo simple para clientes y staff.",
-      "Implementación y puesta en marcha en el local.",
+      "Desarrollo de una app web de pedidos a medida.",
+      "Sistema de compra anticipada con retiro en el local.",
+      "Diseño enfocado en rapidez, claridad y uso cotidiano.",
     ],
     outcome: [
-      "Pedidos más ordenados.",
-      "Menos espera para clientes.",
-      "Operación más predecible.",
+      "Menos filas y menor tiempo de espera.",
+      "Mejor experiencia para clientes frecuentes.",
+      "Herramienta digital integrada al funcionamiento diario del café.",
     ],
     images: {
       cover: "/work/cases/esquinacafe-portada.png",
-      mid: "/placeholders/cases/case-17.jpg",
-      end: "/placeholders/cases/case-18.jpg",
+      mid: "/work/cases/esquina-detalle.png",
+      end: "/work/cases/esquina-end.mp4",
     },
   },
 
@@ -292,6 +292,42 @@ export const CASES: CaseStudy[] = [
       cover: "/work/cases/huella-portada.png",
       mid: "/work/cases/huella-detalle.png",
       end: "/work/cases/huella-end.mp4",
+    },
+  },
+
+{
+    slug: "finacc-vega",
+    title: "Finacc Vega",
+    client: "Finacc Vega",
+    category: "Soluciones a medida",
+    summary:
+      "Desarrollo de una solución a medida para una empresa de asesoramiento contable y construcción de crédito en Estados Unidos, permitiendo la contratación de servicios y cobro a distancia desde cualquier parte del mundo.",
+    serviceTags: [],
+    highlights: [
+      { label: "Gestion", value: "Centralizada" },
+      { label: "Alcance", value: "Global" },
+      { label: "Cobros", value: "Internacionales" },
+    ],
+    context: [
+      "Finacc Vega es una empresa fundada por una contadora especializada en construcción de crédito y asesoramiento financiero para clientes en Estados Unidos. Su trabajo requiere confianza, claridad y procesos bien definidos.",
+      "El canal digital debía permitir vender servicios profesionales de forma remota, gestionar pagos recurrentes y adaptarse a clientes en distintos países y monedas.",
+    ],
+    challenge:
+      "Centralizar la contratación de servicios y el cobro en una sola plataforma, evitando gestiones manuales, transferencias dispersas y barreras geográficas. La solución debía ser simple para el cliente y confiable para un negocio basado en relaciones de largo plazo.",
+    approach: [
+      "Desarrollo de solución a medida con web institucional.",
+      "Sistema de pagos a distancia en distintas monedas.",
+      "Estructuración de flujos claros para clientes internacionales.",
+    ],
+    outcome: [
+      "Cobros digitales centralizados y ordenados.",
+      "Menor carga administrativa manual.",
+      "Experiencia clara y profesional para los clientes.",
+    ],
+    images: {
+      cover: "/work/cases/finaccvega-portada.png",
+      mid: "/work/cases/finacc-detalle.png",
+      end: "/work/cases/finacc-end.mp4",
     },
   },
 ];

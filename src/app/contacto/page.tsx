@@ -3,41 +3,41 @@ import Container from "@/components/layout/Container";
 
 const CONTACT_CARDS = [
   {
-    title: "Colaboraciones",
-    email: "colabora@elephant.studio",
-    phone: "+598 9X XXX XXX",
-    href: "mailto:colabora@elephant.studio",
+    title: "Contactanos",
+    email: "hola@interact.com.uy",
+    phone: "+598 95 302 393",
+    href: "mailto:hola@interact.com.uy",
   },
   {
-    title: "Prensa",
-    email: "prensa@elephant.studio",
-    phone: "+598 9X XXX XXX",
-    href: "mailto:prensa@elephant.studio",
+    title: "Trabaja con nosotros",
+    email: "rrhh@interact.com.uy",
+    phone: "+598 95 302 393",
+    href: "mailto:rrhh@interact.com.uy",
   },
   {
     title: "Soporte",
-    email: "soporte@elephant.studio",
-    phone: "+598 9X XXX XXX",
-    href: "mailto:soporte@elephant.studio",
+    email: "soporte@interact.com.uy",
+    phone: "+598 95 302 393",
+    href: "mailto:soporte@interact.com.uy",
   },
   {
-    title: "Hola",
-    email: "hola@elephant.studio",
-    phone: "+598 9X XXX XXX",
-    href: "mailto:hola@elephant.studio",
+    title: "Administracion y Finanzas",
+    email: "admin@interact.com.uy",
+    phone: "+598 95 302 393",
+    href: "mailto:admin@interact.com.uy",
   },
 ];
 
 const LOCATIONS = [
   {
-    city: "Montevideo",
-    line1: "Montevideo, Uruguay",
+    city: "Montevideo, Uruguay",
+    line1: "World Trade Center, Torre 3 Piso 12.",
     line2: "Reuniones con agenda",
   },
   {
-    city: "Punta del Este",
-    line1: "Maldonado, Uruguay",
-    line2: "Por temporada / proyectos",
+    city: "Maldonado, Uruguay",
+    line1: "El foque 759, Punta del Este.",
+    line2: "Reuniones con agenda",
   },
 ];
 

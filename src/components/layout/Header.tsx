@@ -194,7 +194,7 @@ export default function Header() {
           className="shrink-0 text-sm sm:text-base font-semibold tracking-tight"
           style={{ fontFamily: "var(--font-work)", color: "var(--text)" }}
         >
-          Elephant Studio
+          Interact Studio
         </Link>
 
         {/* Nav (desktop) */}
