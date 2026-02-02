@@ -80,8 +80,7 @@ export default function ContactoPage() {
               </h1>
 
               <p className="mt-4 text-sm sm:text-base" style={{ color: "var(--muted)" }}>
-                Escribinos y te respondemos con próximos pasos claros. Si ya
-                sabés qué necesitás, mejor: avanzamos más rápido.
+                Hablemos de tu proyecto.
               </p>
             </div>
 
@@ -140,3 +139,11 @@ export default function ContactoPage() {
     </main>
   );
 }
+
+
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Contacto",
+  description: "Contanos sobre tu proyecto. Te ayudamos a pensar y construir una solución digital clara, funcional y alineada a tu negocio.",
+};

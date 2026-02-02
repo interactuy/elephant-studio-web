@@ -20,8 +20,27 @@ const dmSans = DM_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "Elephant Studio",
-  description: "Soluciones digitales integrales para pymes, con ecommerce como eje central.",
+  title: {
+    default: "Interact Studio | Ecommerce y Soluciones Digitales",
+    template: "%s | Interact Studio",
+  },
+  description: "SDesarrollamos tiendas online y soluciones digitales, claras, rápidas y fáciles de gestionar, con soporte real cuando lo necesitás.",
+
+  openGraph: {
+    type: "website",
+    siteName: "Interact Studio",
+    title: "Interact Studio",
+    description:
+      "Desarrollamos tiendas online y soluciones digitales, claras, rápidas y fáciles de gestionar, con soporte real cuando lo necesitás.",
+    images: [
+      {
+        url: "/og/og.png",
+        width: 1200,
+        height: 630,
+        alt: "Interact Studio",
+      },
+    ],
+  },
 };
 
 export default function RootLayout({

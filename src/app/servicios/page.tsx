@@ -15,7 +15,7 @@ const SERVICES: Service[] = [
     title: "Desarrollo eCommerce",
     desc:
       "Diseñamos tiendas online rápidas y claras, pensadas para convertir desde el primer día. UX, performance y checkout sin fricción, con una arquitectura limpia y escalable para vender mejor y crecer con orden.",
-    href: "/servicios/desarrollo-ecommerce",
+    href: "/contacto",
     ui: "checkout",
   },
   {
@@ -23,7 +23,7 @@ const SERVICES: Service[] = [
     title: "Auditoría",
     desc:
       "Analizamos UX, performance y conversión para detectar frenos reales y oportunidades claras. Entregamos un plan de acción priorizado con quick wins y un roadmap claro para ejecutar con criterio.",
-    href: "/servicios/auditoria",
+    href: "/contacto",
     ui: "checklist",
   },
   {
@@ -31,7 +31,7 @@ const SERVICES: Service[] = [
     title: "Optimización",
     desc:
       "Mejoras medibles en performance, UX y conversión para que tu tienda rinda más con el mismo tráfico. Reducimos fricción y optimizamos resultados sin cambiar tu marca.",
-    href: "/servicios/optimizacion",
+    href: "/contacto",
     ui: "chart",
   },
   {
@@ -39,7 +39,7 @@ const SERVICES: Service[] = [
     title: "Gestión",
     desc:
       "Acompañamiento mensual para ejecutar mejoras, iterar cambios y sostener resultados. Orden, seguimiento y avance constante, sin que tengas que estar encima.",
-    href: "/servicios/gestion",
+    href: "/contacto",
     ui: "timeline",
   },
   {
@@ -47,7 +47,7 @@ const SERVICES: Service[] = [
     title: "Soluciones a medida",
     desc:
       "Integraciones, automatizaciones y desarrollo específico cuando lo estándar no alcanza. Conectamos herramientas y armamos flujos a medida para resolver procesos reales con lógica clara y consistente.",
-    href: "/servicios/soluciones-a-medida",
+    href: "/contacto",
     ui: "code",
   },
 ];
@@ -530,3 +530,11 @@ export default function ServiciosPage() {
     </main>
   );
 }
+
+// src/app/servicios/page.tsx
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Servicios",
+  description: "Desarrollo de tiendas online y soluciones digitales pensadas para ordenar la venta, mejorar la experiencia y acompañar el crecimiento del negocio.",
+};

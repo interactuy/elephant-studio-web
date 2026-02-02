@@ -9,7 +9,7 @@ export default function NosotrosPage() {
         <Container>
           <div className="max-w-3xl">
             <div
-              className="text-xs font-semibold uppercase tracking-wide"
+              className="text-base font-semibold"
               style={{
                 color: "color-mix(in srgb, var(--accent-warm) 88%, transparent)",
               }}
@@ -74,7 +74,7 @@ export default function NosotrosPage() {
                 boxShadow: "var(--shadow-sm)",
               }}
             >
-              <div className="text-xs font-semibold uppercase tracking-wide" style={{ color: "var(--muted)" }}>
+              <div className="text-base font-semibold" style={{ color: "var(--muted)" }}>
                 Misión
               </div>
               <h2
@@ -84,7 +84,7 @@ export default function NosotrosPage() {
                 Hacer que vender online sea simple y sostenible.
               </h2>
               <p className="mt-3 text-sm sm:text-base leading-relaxed" style={{ color: "var(--muted)" }}>
-                Diseñamos y construimos eCommerce con foco en claridad, conversión y
+                Diseñamos y construimos ecommerce con foco en claridad, conversión y
                 performance. Menos fricción para el cliente, más control para el negocio.
               </p>
             </div>
@@ -97,17 +97,17 @@ export default function NosotrosPage() {
                 boxShadow: "var(--shadow-sm)",
               }}
             >
-              <div className="text-xs font-semibold uppercase tracking-wide" style={{ color: "var(--muted)" }}>
+              <div className="text-base font-semibold" style={{ color: "var(--muted)" }}>
                 Visión
               </div>
               <h2
                 className="mt-2 text-2xl sm:text-3xl font-semibold tracking-tight"
                 style={{ fontFamily: "var(--font-work)", color: "var(--text)" }}
               >
-                Subir el estándar del eCommerce: orden, intención y criterio.
+                Subir el estándar del ecommerce: orden, intención y criterio.
               </h2>
               <p className="mt-3 text-sm sm:text-base leading-relaxed" style={{ color: "var(--muted)" }}>
-                Que cada tienda se sienta premium porque funciona mejor: más rápida,
+                Que cada solucion se sienta premium porque funciona mejor: más rápida,
                 más clara y más fácil de mantener a medida que crece.
               </p>
             </div>
@@ -121,17 +121,17 @@ export default function NosotrosPage() {
           <div className="grid gap-6 lg:grid-cols-3">
             <BigValue
               title="Claridad"
-              text="Arquitectura, jerarquía y microcopy para que el usuario entienda y avance sin dudas."
+              text="Comunicación simple y directa. Te decimos qué vamos a hacer, por qué, cuánto cuesta y cuándo está listo—sin ambigüedades."
               accent="var(--accent-warm)"
             />
             <BigValue
               title="Seguridad"
-              text="Bases técnicas sólidas, performance real y decisiones justificadas que no se rompen con el tiempo."
+              text="Proceso ordenado y acuerdos claros. Mantenemos control del avance, priorizamos lo importante y cumplimos lo pactado con criterio."
               accent="var(--accent)"
             />
             <BigValue
               title="Cercanía"
-              text="Comunicación directa, seguimiento y criterio para sostener mejoras sin vueltas ni humo."
+              text="Trato humano y seguimiento real. Estamos presentes, respondemos rápido y te acompañamos para que tomes decisiones con tranquilidad."
               accent="color-mix(in srgb, var(--accent) 55%, var(--accent-warm))"
             />
           </div>
@@ -244,3 +244,10 @@ function BigValue({
     </div>
   );
 }
+
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Nosotros",
+  description: "Somos un estudio digital enfocado en diseñar y desarrollar soluciones claras, funcionales y pensadas para resolver problemas reales de negocio.",
+};

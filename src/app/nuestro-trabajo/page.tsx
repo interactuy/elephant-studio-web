@@ -541,3 +541,11 @@ export default function NuestroTrabajoPage() {
     </main>
   );
 }
+
+
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Nuestro Trabajo",
+  description: "Conocé algunos de nuestros proyectos: tiendas online y soluciones digitales diseñadas con criterio, claridad y foco en resultados reales.",
+};

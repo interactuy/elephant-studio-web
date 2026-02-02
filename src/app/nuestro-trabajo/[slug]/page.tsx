@@ -111,20 +111,26 @@ export default async function CaseStudyPage({ params }: Props) {
                 background: "color-mix(in srgb, var(--surface) 80%, transparent)",
               }}
             >
-              <div className="grid grid-cols-3 gap-3">
+              <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
                 {cs.highlights.map((h) => (
                   <div
                     key={h.label}
-                    className="rounded-xl border p-4"
+                    className="min-w-0 rounded-xl border p-3 sm:p-4"
                     style={{
                       borderColor: "var(--border)",
                       background: "color-mix(in srgb, var(--bg) 92%, transparent)",
                     }}
                   >
-                    <div className="text-xs font-medium" style={{ color: "var(--muted)" }}>
+                    <div
+                      className="text-[11px] sm:text-xs font-medium"
+                      style={{ color: "var(--muted)" }}
+                    >
                       {h.label}
                     </div>
-                    <div className="mt-1 text-lg font-semibold" style={{ color: "var(--text)" }}>
+                    <div
+                      className="mt-1 text-base sm:text-lg font-semibold leading-tight break-words"
+                      style={{ color: "var(--text)" }}
+                    >
                       {h.value}
                     </div>
                   </div>

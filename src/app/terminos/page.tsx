@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Términos de Uso | Elephant Studio",
+  title: "Términos de Uso",
   description:
-    "Términos y condiciones de uso del sitio web de Elephant Studio.",
+    "Términos y condiciones de uso del sitio web",
 };
 
 export default function TerminosPage() {

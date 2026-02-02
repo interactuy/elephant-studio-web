@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Política de Privacidad | Elephant Studio",
+  title: "Privacidad",
   description:
-    "Política de privacidad de Elephant Studio. Información sobre el uso y protección de datos personales.",
+    "Política de privacidad de Interact Studio. Información sobre el uso y protección de datos personales.",
 };
 
 export default function PrivacidadPage() {
@@ -101,3 +101,5 @@ export default function PrivacidadPage() {
     </main>
   );
 }
+
+

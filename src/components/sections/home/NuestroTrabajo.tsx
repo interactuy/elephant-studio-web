@@ -177,23 +177,24 @@ export default function NuestroTrabajoSimple() {
         </div>
 
         {/* CTA */}
-        <div className="mt-10 flex items-center justify-between gap-4">
+        <div className="mt-10 grid gap-4 sm:grid-cols-[1fr,auto] sm:items-center">
           <p className="text-sm" style={{ color: "var(--muted)" }}>
             Querés ver más trabajos o hablar de tu tienda?
           </p>
 
-          <a
+          <Link
             href="/nuestro-trabajo"
-            className="inline-flex items-center justify-center rounded-xl px-4 py-2 text-sm font-semibold"
+            className="w-full sm:w-auto inline-flex items-center justify-between sm:justify-center gap-2 rounded-xl border px-5 py-3 text-sm font-semibold transition"
             style={{
-              border: "1px solid var(--border)",
+              borderColor: "var(--border)",
               background: "color-mix(in srgb, var(--surface) 82%, transparent)",
               color: "var(--text)",
               boxShadow: "var(--shadow-sm)",
             }}
           >
-            Ver más →
-          </a>
+            <span>Ver más</span>
+            <span aria-hidden>→</span>
+          </Link>
         </div>
       </div>
     </section>
