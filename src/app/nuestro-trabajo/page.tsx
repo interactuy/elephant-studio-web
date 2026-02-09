@@ -329,7 +329,7 @@ function LogosConfianza() {
     { id: "l1", alt: "Logo 1", src: "/work/logos/logourufarma.png" },
     { id: "l2", alt: "Logo 2", src: "/work/logos/elevenkhas.png" },
     { id: "l3", alt: "Logo 3", src: "/work/logos/RDCMVD1.png" },
-    { id: "l4", alt: "Logo 4", src: "/work/logos/Prism1.png" },
+    { id: "l4", alt: "Logo 4", src: "/work/logos/prism1.png" },
   ];
 
   return (

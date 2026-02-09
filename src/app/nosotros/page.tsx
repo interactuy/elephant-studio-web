@@ -30,9 +30,9 @@ export default function NosotrosPage() {
               className="mt-6 text-base sm:text-lg leading-relaxed"
               style={{ color: "var(--muted)" }}
             >
-              Elephant Studio nació de una obsesión práctica: que una tienda no se
-              sienta como “algo lindo”, sino como un sistema confiable para vender.
-              Sin fricción, sin improvisación, sin capas innecesarias.
+              Interact Studio nació de una obsesión práctica: que una tienda no se
+              sienta como “algo lindo” y nada mas, sino como un sistema confiable para vender.
+              Sin fricción, sin improvisación, sin cosas innecesarias.
             </p>
 
             <p
