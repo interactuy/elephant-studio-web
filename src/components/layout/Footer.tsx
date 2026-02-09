@@ -6,7 +6,7 @@ type LinkItem = { label: string; href: string };
 
 const NAV: LinkItem[] = [
   { label: "Inicio", href: "/" },
-  { label: "Servicios", href: "/#servicios" },
+  { label: "Servicios", href: "/servicios" },
   { label: "Trabajo", href: "/nuestro-trabajo" },
   { label: "Nosotros", href: "/nosotros" },
   { label: "Contacto", href: "/contacto" },

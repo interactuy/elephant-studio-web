@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     default: "Interact Studio | Ecommerce y Soluciones Digitales",
     template: "%s | Interact Studio",
   },
-  description: "SDesarrollamos tiendas online y soluciones digitales, claras, rápidas y fáciles de gestionar, con soporte real cuando lo necesitás.",
+  description: "Desarrollamos tiendas online y soluciones digitales, claras, rápidas y fáciles de gestionar, con soporte real cuando lo necesitás.",
 
   openGraph: {
     type: "website",
