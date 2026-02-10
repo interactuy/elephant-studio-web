@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Container from "@/components/layout/Container";
+import ContactCards from "@/components/contact/ContactCards";
 
 const CONTACT_CARDS = [
   {
@@ -33,11 +34,15 @@ const LOCATIONS = [
     city: "Montevideo, Uruguay",
     line1: "World Trade Center, Torre 3 Piso 12.",
     line2: "Reuniones con agenda",
+    mapHref:
+      "https://maps.app.goo.gl/fJ3od3785Duuokua8",
   },
   {
     city: "Maldonado, Uruguay",
     line1: "El foque 759, Punta del Este.",
     line2: "Reuniones con agenda",
+    mapHref:
+      "https://www.google.com/maps/search/?api=1&query=El+Foque+759+Punta+del+Este",
   },
 ];
 
@@ -85,20 +90,7 @@ export default function ContactoPage() {
             </div>
 
             {/* Right grid */}
-            <div className="grid gap-6 sm:grid-cols-2">
-              {CONTACT_CARDS.map((c) => (
-                <Card key={c.title} title={c.title}>
-                  <Link
-                    href={c.href}
-                    className="inline-flex font-medium underline-offset-4 hover:underline"
-                    style={{ color: "var(--accent)" }}
-                  >
-                    {c.email}
-                  </Link>
-                  <div>{c.phone}</div>
-                </Card>
-              ))}
-            </div>
+            <ContactCards />
           </div>
 
           {/* Divider */}
@@ -127,11 +119,22 @@ export default function ContactoPage() {
             {/* Right grid */}
             <div className="grid gap-6 sm:grid-cols-2">
               {LOCATIONS.map((l) => (
-                <Card key={l.city} title={l.city}>
-                  <div style={{ color: "var(--text)" }}>{l.line1}</div>
-                  <div>{l.line2}</div>
-                </Card>
-              ))}
+  <Card key={l.city} title={l.city}>
+    <a
+      href={l.mapHref}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="block underline-offset-4 hover:underline"
+      style={{ color: "var(--text)" }}
+    >
+      <div>{l.line1}</div>
+      <div className="mt-1 text-sm" style={{ color: "var(--muted)" }}>
+        {l.line2}
+      </div>
+    </a>
+  </Card>
+))}
+
             </div>
           </div>
         </Container>
@@ -140,10 +143,10 @@ export default function ContactoPage() {
   );
 }
 
-
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Contacto",
-  description: "Contanos sobre tu proyecto. Te ayudamos a pensar y construir una solución digital clara, funcional y alineada a tu negocio.",
+  description:
+    "Contanos sobre tu proyecto. Te ayudamos a pensar y construir una solución digital clara, funcional y alineada a tu negocio.",
 };

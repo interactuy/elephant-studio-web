@@ -40,7 +40,7 @@ export default function NosotrosHome() {
                 style={{ color: "var(--muted)" }}
               >
                 <p>
-                  Elephant Studio nació de una obsesión práctica: que una tienda
+                  Interact Studio nació de una obsesión práctica: que una tienda
                   no se sienta como “algo lindo”, sino como un sistema confiable
                   para vender.
                 </p>

@@ -148,7 +148,7 @@ export default function Servicios() {
                 {/* Visual grande (mock) */}
                 <div className="relative min-h-[26rem] w-full grow">
                   <div
-                    className="absolute inset-x-10 top-10 bottom-0 overflow-hidden rounded-t-[2.2rem]"
+                    className="absolute inset-x-4 sm:inset-x-10 top-10 bottom-0 overflow-hidden rounded-t-[2.2rem]"
                     style={{
                       background:
                         "linear-gradient(to bottom, rgba(15,23,42,0.03), rgba(15,23,42,0.00))",

@@ -365,7 +365,7 @@ function LogosConfianza() {
                 className="flex items-center justify-center rounded-2xl border px-4 py-6"
                 style={{
                   borderColor: "var(--border)",
-                  background: "color-mix(in srgb, var(--bg) 55%, transparent)",
+                  background: "color-mix(in srgb, var(--text) 12%, transparent)"
                 }}
               >
                 {/* eslint-disable-next-line @next/next/no-img-element */}
