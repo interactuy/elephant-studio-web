@@ -1,4 +1,5 @@
 // src/app/layout.tsx
+import { Suspense } from "react";
 import type { Metadata } from "next";
 import { Work_Sans, DM_Sans } from "next/font/google";
 import Script from "next/script";
@@ -79,7 +80,10 @@ export default function RootLayout({
 
       <body>
         {/* GA pageviews para navegación (App Router) */}
+      <Suspense fallback={null}>
         <AnalyticsListener />
+      </Suspense>
+
 
         <Header />
         {children}
