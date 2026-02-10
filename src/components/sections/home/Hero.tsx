@@ -11,7 +11,7 @@ export default function Hero() {
           className="absolute inset-0 opacity-100 transition-opacity duration-300
                      [html[data-theme=dark]_&]:opacity-0"
           style={{
-            backgroundImage: "url(/hero/lightback.png)",
+            backgroundImage: "url(/hero/lightback.avif)",
             backgroundSize: "cover",
             backgroundPosition: "center",
           }}
@@ -22,7 +22,7 @@ export default function Hero() {
           className="absolute inset-0 opacity-0 transition-opacity duration-300
                      [html[data-theme=dark]_&]:opacity-100"
           style={{
-            backgroundImage: "url(/hero/darkback.png)",
+            backgroundImage: "url(/hero/darkback.avif)",
             backgroundSize: "cover",
             backgroundPosition: "center",
           }}

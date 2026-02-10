@@ -174,7 +174,7 @@ export const CASES: CaseStudy[] = [
       "Base sólida para ampliar alcance más allá del local físico.",
     ],
     images: {
-      cover: "/work/cases/cosplay-portada.png",
+      cover: "/work/cases/cosplay-portada.webp",
       mid: "/work/cases/cosplay-detalle3.png",
       end: "/work/cases/cosplay-end.mp4",
     },

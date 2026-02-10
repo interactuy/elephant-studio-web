@@ -55,7 +55,7 @@ const WORKS: Work[] = [
     tag: "Desarrollo Ecommerce",
     desc: "Desarrollo de tienda online desde cero para digitalizar catálogo, ordenar la experiencia de compra y convertir el sitio en una herramienta real de expansión y alcance.",
     href: "/nuestro-trabajo/cosplay",
-    imageUrl: "/work/cases/cosplay-portada.png",
+    imageUrl: "/work/cases/cosplay-portada.webp",
   },
   {
     id: "epoca",
