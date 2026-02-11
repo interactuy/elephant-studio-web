@@ -134,7 +134,6 @@ export default function ContactoPage() {
     </a>
   </Card>
 ))}
-
             </div>
           </div>
         </Container>

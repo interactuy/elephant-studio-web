@@ -13,7 +13,7 @@ function SectionHeader({
   eyebrow,
   title,
   desc,
-  align = "center",
+  align = "left",
 }: {
   eyebrow?: string;
   title: string;
@@ -22,9 +22,9 @@ function SectionHeader({
 }) {
   const isCenter = align === "center";
   return (
-    <div className={isCenter ? "mx-auto max-w-2xl text-center" : "max-w-2xl"}>
+    <div className={isCenter ? "mx-auto max-w-3xl text-center" : "max-w-3xl"}>
       {eyebrow ? (
-        <p className="text-sm font-medium tracking-wide" style={{ color: "var(--muted)" }}>
+        <p className="text-base font-semibold" style={{ color: "var(--accent-warm)" }}>
           {eyebrow}
         </p>
       ) : null}
@@ -76,8 +76,9 @@ function PrimaryButton({
                  transition will-change-transform hover:-translate-y-[1px] active:translate-y-0
                  focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2"
       style={{
+        borderRadius: "28px",
         background: "var(--accent)",
-        color: "var(--accent-accent)",
+        color: "var(--accent-contrast)",
         border: "1px solid color-mix(in oklab, var(--accent) 85%, var(--border))",
         boxShadow: "0 14px 34px rgba(0,0,0,0.14)",
         // importante: si tu site ya define ring-offset por theme, esto se adapta
@@ -102,23 +103,39 @@ function PrimaryButton({
 }
 
 
-function SecondaryButton({ href, children }: { href: string; children: React.ReactNode }) {
+function SecondaryButton({
+  href,
+  children,
+}: {
+  href: string;
+  children: React.ReactNode;
+}) {
   return (
     <a
       href={href}
-      className="inline-flex items-center justify-center rounded-full px-6 py-3 text-sm font-semibold transition will-change-transform
-                 hover:-translate-y-[1px] active:translate-y-0"
+      className="inline-flex items-center justify-center px-6 py-3 text-sm font-semibold
+                 transition will-change-transform hover:-translate-y-[1px] active:translate-y-0"
       style={{
-        background: "color-mix(in oklab, var(--card) 60%, transparent)",
+        borderRadius:"28px",
+        background: "var(--surface)",
         color: "var(--text)",
         border: "1px solid var(--border)",
-        backdropFilter: "blur(10px)",
+        boxShadow: "0 6px 16px rgba(0,0,0,0.06)",
+      }}
+      onMouseEnter={(e) => {
+        (e.currentTarget.style as any).background =
+          "color-mix(in srgb, var(--surface) 85%, white)";
+      }}
+      onMouseLeave={(e) => {
+        (e.currentTarget.style as any).background = "var(--surface)";
       }}
     >
       {children}
     </a>
   );
 }
+
+
 
 function ChecklistItem({ children }: { children: React.ReactNode }) {
   return (
@@ -200,13 +217,21 @@ function CaseImageCard({ title, href, imageUrl }: Case) {
 
       {/* Overlay gradiente (abajo → arriba) */}
       <div
-        className="pointer-events-none absolute inset-0"
-        aria-hidden="true"
-        style={{
-          background:
-            "linear-gradient(to top, rgba(0,0,0,0.75) 0%, rgba(0,0,0,0.45) 35%, rgba(0,0,0,0.12) 65%, rgba(0,0,0,0) 100%)",
-        }}
-      />
+  className="absolute inset-0"
+  style={{
+    background:
+      "linear-gradient(to right, rgba(0,0,0,0.45) 0%, rgba(0,0,0,0.25) 50%, rgba(0,0,0,0.15) 80%, rgba(0,0,0,0.05) 100%)",
+  }}
+/>
+
+<div
+  className="absolute inset-0"
+  style={{
+    background:
+      "radial-gradient(120% 95% at 50% 40%, transparent 55%, rgba(0,0,0,0.35) 100%)",
+  }}
+/>
+
 
       {/* Título abajo */}
       <div className="absolute inset-x-0 bottom-0 p-5 sm:p-6">
@@ -256,14 +281,14 @@ export default function Page() {
       imageUrl: "/work/cases/tmb-portada.png",
     },
     {
-      title: "Maki",
-      href: "/nuestro-trabajo/maki",
-      imageUrl: "/work/cases/maki-portada.png",
+      title: "Huella Propia",
+      href: "/nuestro-trabajo/huella-propia",
+      imageUrl: "/work/cases/huella-portada.png",
     },
     {
-      title: "Esquina Café",
-      href: "/nuestro-trabajo/esquina-cafe",
-      imageUrl: "/work/cases/esquina-portada.png",
+      title: "Cosplay Anime Store",
+      href: "/nuestro-trabajo/cosplay",
+      imageUrl: "/work/cases/cosplay-portada.webp",
     },
   ];
 
@@ -287,34 +312,77 @@ export default function Page() {
   ];
 
   return (
-    <main style={{ background: "var(--bg)" }}>
-      {/* Animaciones hero (suave) */}
-      <style>{`
-        @media (prefers-reduced-motion: reduce) {
-          .hero-in { animation: none !important; opacity: 1 !important; transform: none !important; }
-        }
-        .hero-in {
-          opacity: 0;
-          transform: translateY(10px);
-          animation: heroIn 700ms cubic-bezier(.2,.8,.2,1) forwards;
-        }
-        .hero-in.delay-1 { animation-delay: 80ms; }
-        .hero-in.delay-2 { animation-delay: 160ms; }
-        .hero-in.delay-3 { animation-delay: 240ms; }
-        .hero-in.delay-4 { animation-delay: 320ms; }
-        @keyframes heroIn {
-          to { opacity: 1; transform: translateY(0); }
-        }
-      `}</style>
+    <main className="landing-ecommerce" style={{ background: "var(--bg)" }}>
+
+  {/* =========================
+      ANIMACIONES + FIX LOCAL BOTONES
+     ========================= */}
+  <style>{`
+    @media (prefers-reduced-motion: reduce) {
+      .hero-in { 
+        animation: none !important; 
+        opacity: 1 !important; 
+        transform: none !important; 
+      }
+    }
+
+    .hero-in {
+      opacity: 0;
+      transform: translateY(10px);
+      animation: heroIn 700ms cubic-bezier(.2,.8,.2,1) forwards;
+    }
+
+    .hero-in.delay-1 { animation-delay: 80ms; }
+    .hero-in.delay-2 { animation-delay: 160ms; }
+    .hero-in.delay-3 { animation-delay: 240ms; }
+    .hero-in.delay-4 { animation-delay: 320ms; }
+
+    @keyframes heroIn {
+      to { 
+        opacity: 1; 
+        transform: translateY(0); 
+      }
+    }
+
+    /* =========================
+       FIX CONTRASTE BOTONES SOLO ESTA LANDING
+       ========================= */
+
+    .landing-ecommerce {
+      --accent-contrast: #ffffff;
+    }
+
+    [data-theme="dark"] .landing-ecommerce {
+      --accent-contrast: #ffffff;
+    }
+
+    /* Secondary buttons en esta landing sobre fondos oscuros */
+
+.landing-ecommerce .btn-secondary-on-dark {
+  color: #ffffff;
+  border-color: rgba(255,255,255,0.4);
+}
+
+.landing-ecommerce .btn-secondary-on-dark:hover {
+  background: rgba(255,255,255,0.10);
+}
+
+  `}</style>
+
+  {/* === ACÁ SIGUE TODO TU CONTENIDO NORMAL === */}
+
 
       {/* HERO FULL WIDTH (imagen real como fondo) */}
       <section
-        className="relative w-full overflow-hidden"
-        style={{
-          paddingTop: "calc(var(--header-h, 84px) + 28px)",
-          background: "var(--bg)",
-        }}
-      >
+  className="relative w-full overflow-hidden"
+  style={{
+    paddingTop: "calc(var(--header-h, 84px) + 64px)",
+    paddingBottom: "120px",
+    minHeight: "72vh",
+    background: "var(--bg)",
+  }}
+>
+
         {/* Fondo imagen + overlays de contraste */}
         <div className="pointer-events-none absolute inset-0" aria-hidden="true">
           {/* ✅ Placeholder: reemplazá por tu imagen */}
@@ -347,8 +415,8 @@ export default function Page() {
         {/* Contenido */}
         <div className="relative">
           <div className="mx-auto max-w-2xl px-6 lg:max-w-[var(--container)] lg:px-8">
-            <div className="pb-16 sm:pb-24">
-              <p className="hero-in text-xs sm:text-sm font-semibold tracking-wide" style={{ color: "rgba(255,255,255,0.75)" }}>
+            <div className="pb-16 sm:pb-32">
+              <p className="hero-in text-xs sm:text-sm font-semibold tracking-wide" style={{ color: "var(--accent-warm)" }}>
                 DESARROLLO ECOMMERCE PARA PYMES
               </p>
 
@@ -514,30 +582,65 @@ export default function Page() {
         </div>
       </section>
 
-      {/* GARANTÍA */}
-      <section className="py-14 sm:py-16">
-        <div className="mx-auto max-w-2xl px-6 lg:max-w-[var(--container)] lg:px-8">
-          <div className="relative overflow-hidden rounded-[2.5rem] px-7 py-12 sm:px-10 sm:py-14 text-center" style={{ background: "var(--surface)", border: "1px solid var(--border)", boxShadow: PREMIUM_CARD_SHADOW }}>
-            <p className="text-sm font-medium" style={{ color: "var(--muted)" }}>
-              Como en todo, garantía Interact
-            </p>
-            <h3 className="mt-3 text-3xl sm:text-4xl font-semibold tracking-tight" style={{ color: "var(--text)" }}>
-              Si no estás conforme, te devolvemos tu dinero.
-            </h3>
-            <div className="mt-6 flex flex-wrap justify-center gap-3">
-              <PrimaryButton href="#contacto">Hablar y arrancar</PrimaryButton>
-              <Link
-                href="/terminos"
-                className="inline-flex items-center justify-center rounded-full px-6 py-3 text-sm font-semibold transition will-change-transform
-                           hover:-translate-y-[1px] active:translate-y-0"
-                style={{ border: "1px solid var(--border)", color: "var(--text)", background: "color-mix(in oklab, var(--card) 60%, transparent)" }}
-              >
-                Ver condiciones
-              </Link>
-            </div>
-          </div>
+      {/* GARANTÍA (consistente + protagonista por jerarquía) */}
+<section className="py-14 sm:py-16">
+  <div className="mx-auto max-w-3xl px-6 lg:max-w-[var(--container)] lg:px-8">
+    <div
+      className="relative overflow-hidden rounded-[2.5rem] px-7 py-12 sm:px-10 sm:py-14"
+      style={{
+        // ✅ Ideal: igual que tus cards.
+        // Si NO tenés --card definido, reemplazá por: "var(--surface)"
+        background: "var(--card)",
+        border: "1px solid var(--border)",
+        boxShadow: PREMIUM_CARD_SHADOW,
+      }}
+    >
+      <div className="mx-auto max-w-3xl text-center">
+        <p className="text-sm font-medium" style={{ color: "var(--muted)" }}>
+          Como en todo, garantía Interact
+        </p>
+
+        <h3
+          className="mt-3 text-3xl sm:text-4xl font-semibold tracking-tight"
+          style={{ color: "var(--text)" }}
+        >
+          Si no estás conforme, te devolvemos tu dinero.
+        </h3>
+
+        <div className="mt-7 flex flex-col items-center gap-4">
+          <PrimaryButton href="#contacto">Hablar y arrancar</PrimaryButton>
+
+          <p className="text-xs" style={{ color: "var(--muted)" }}>
+            Sujeto a{" "}
+            <Link
+              href="/terminos"
+              className="relative inline-block group"
+              style={{ color: "var(--text)" }}
+            >
+              <span className="relative z-10">bases y condiciones</span>
+
+              {/* Línea base suave */}
+              <span
+                className="absolute left-0 -bottom-[2px] h-[1px] w-full opacity-40 transition-opacity duration-300"
+                style={{ background: "currentColor" }}
+              />
+
+              {/* Línea hover animada */}
+              <span
+                className="absolute left-0 -bottom-[2px] h-[1px] w-full scale-x-0 origin-left transition-transform duration-300 group-hover:scale-x-100"
+                style={{ background: "currentColor" }}
+              />
+            </Link>
+            .
+          </p>
         </div>
-      </section>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
 
       {/* FAQ */}
       <section className="py-12 sm:py-14">
@@ -549,42 +652,89 @@ export default function Page() {
         </div>
       </section>
 
-      {/* CTA FINAL */}
-      <section id="contacto" className="relative py-14 sm:py-16">
-        <div className="mx-auto max-w-2xl px-6 lg:max-w-[var(--container)] lg:px-8">
-          <div className="relative overflow-hidden rounded-[2.5rem] px-7 py-12 sm:px-10 sm:py-14" style={{ background: "var(--cta-bg)", color: "var(--cta-text)", border: "1px solid var(--cta-border)", boxShadow: PREMIUM_CARD_SHADOW }}>
-            <h3 className="text-2xl sm:text-3xl font-semibold tracking-tight">¿Listo para vender con orden?</h3>
-            <p className="mt-3 max-w-xl text-sm sm:text-base leading-relaxed" style={{ opacity: 0.9 }}>
-              Contame qué vendés y en qué país. Te respondemos con una propuesta clara y el plan más simple para tu caso.
-            </p>
+      {/* CTA FINAL (oscuro en light / blanco en dark) */}
+<section id="contacto" className="relative py-14 sm:py-16">
+  {/* Tokens locales SOLO para este CTA (CSS puro) */}
+  <style>{`
+    /* Light mode: panel oscuro */
+    :root {
+      --cta-panel-bg: #0b1220;
+      --cta-panel-text: rgba(255,255,255,0.92);
+      --cta-panel-muted: rgba(255,255,255,0.72);
+      --cta-panel-border: rgba(255,255,255,0.10);
+    }
 
-            <div className="mt-7 flex flex-wrap gap-3">
-              <a
-                href="https://wa.me/59800000000?text=Hola%20Interact,%20quiero%20una%20tienda%20online%20en%2015%20d%C3%ADas."
-                target="_blank"
-                rel="noreferrer"
-                className="inline-flex items-center justify-center rounded-full px-6 py-3 text-sm font-semibold transition will-change-transform
-                           hover:-translate-y-[1px] active:translate-y-0"
-                style={{ background: "var(--cta-btn)", color: "var(--cta-btn-text)" }}
-              >
-                Hablar por WhatsApp
-              </a>
-              <a
-                href="mailto:hola@interact.uy?subject=Tienda%20online%20en%2015%20d%C3%ADas"
-                className="inline-flex items-center justify-center rounded-full px-6 py-3 text-sm font-semibold transition will-change-transform
-                           hover:-translate-y-[1px] active:translate-y-0"
-                style={{ border: "1px solid rgba(255,255,255,0.25)" }}
-              >
-                Enviar email
-              </a>
-            </div>
+    /* Dark mode: panel blanco */
+    [data-theme="dark"] {
+      --cta-panel-bg: #ffffff;
+      --cta-panel-text: #083344;
+      --cta-panel-muted: rgba(8, 51, 68, 0.78);
+      --cta-panel-border: rgba(8, 51, 68, 0.14);
+    }
+  `}</style>
 
-            <p className="mt-6 text-xs" style={{ opacity: 0.85 }}>
-              *Tiempos estimados: 10–15 días hábiles según alcance y materiales entregados.
-            </p>
-          </div>
+  <div className="mx-auto max-w-2xl px-6 lg:max-w-[var(--container)] lg:px-8">
+    <div
+      className="relative overflow-hidden rounded-[2.5rem] px-7 py-12 sm:px-10 sm:py-14"
+      style={{
+        background: "var(--cta-panel-bg)",
+        color: "var(--cta-panel-text)",
+        border: "1px solid var(--cta-panel-border)",
+        boxShadow: PREMIUM_CARD_SHADOW,
+
+        // ✅ CLAVE: “mapeamos” tokens globales SOLO dentro del CTA
+        // para que SecondaryButton (que usa var(--text), var(--card), var(--border))
+        // se vea bien cuando el panel es blanco en dark.
+        // @ts-ignore
+        "--text": "var(--cta-panel-text)",
+        // @ts-ignore
+        "--muted": "var(--cta-panel-muted)",
+        // @ts-ignore
+        "--card": "var(--cta-panel-bg)",
+        // @ts-ignore
+        "--surface": "var(--cta-panel-bg)",
+        // @ts-ignore
+        "--border": "var(--cta-panel-border)",
+      }}
+    >
+      {/* brillo suave arriba (premium) */}
+      <div
+        className="pointer-events-none absolute inset-0"
+        aria-hidden="true"
+        style={{
+          background:
+            "linear-gradient(180deg, rgba(255,255,255,0.08) 0%, rgba(255,255,255,0.00) 55%)",
+        }}
+      />
+
+      <div className="relative">
+        <h3 className="text-2xl sm:text-3xl font-semibold tracking-tight">
+          ¿Listo para vender con orden?
+        </h3>
+
+        <p
+          className="mt-3 max-w-xl text-sm sm:text-base leading-relaxed"
+          style={{ color: "var(--cta-panel-muted)" }}
+        >
+          Contame qué vendés y en qué país. Te respondemos con una propuesta clara y el plan más simple para tu caso.
+        </p>
+
+        <div className="mt-7 flex flex-wrap gap-3">
+          <PrimaryButton href="https://wa.me/59895302393">Hablar por WhatsApp</PrimaryButton>
+          <SecondaryButton href="mailto:hola@interact.uy?subject=Tienda%20online%20en%2015%20d%C3%ADas">
+            Enviar email
+          </SecondaryButton>
         </div>
-      </section>
+
+        <p className="mt-6 text-xs" style={{ color: "var(--cta-panel-muted)" }}>
+          *Tiempos estimados: 10–15 días hábiles según alcance y materiales entregados.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
     </main>
   );
 }
