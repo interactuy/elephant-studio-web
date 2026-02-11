@@ -41,7 +41,7 @@ export const metadata: Metadata = {
       "Desarrollamos tiendas online y soluciones digitales, claras, rápidas y fáciles de gestionar, con soporte real cuando lo necesitás.",
     images: [
       {
-        url: "/og/og.png",
+        url: "/og/og1.png",
         width: 1200,
         height: 630,
         alt: "Interact Studio",
