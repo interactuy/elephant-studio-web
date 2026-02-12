@@ -258,12 +258,12 @@ function CaseImageCard({ title, href, imageUrl }: Case) {
 
 export default function Page() {
   const BENEFITS: Benefit[] = [
-    { title: "Rápido", desc: "Creamos tu tienda online en 10–15 días hábiles, lista para vender." },
-    { title: "Accesible", desc: "Precios claros y opciones de pago. Podés abonar en cuotas (según método)." },
-    { title: "Sencillo", desc: "Administrable: productos, precios y contenido sin depender de terceros." },
-    { title: "Responsive", desc: "Se ve impecable en móvil, tablet y desktop." },
-    { title: "Acepta tus pagos", desc: "Integramos Mercado Pago, PayPal, Stripe y más (según país)." },
-    { title: "Al mundo", desc: "Listo para idiomas y monedas si tu negocio lo requiere." },
+    { title: "Implementación ágil", desc: "Proceso definido y entregables claros. Tu tienda lista en 10-15 dias habiles." },
+    { title: "Inversión transparente", desc: "Precios claros y opciones de pago acordes a la etapa de tu negocio." },
+    { title: "Gestión simple", desc: "Podés administrar productos, precios y contenido sin depender de terceros." },
+    { title: "Experiencia impecable", desc: "Optimizada para móvil, tablet y desktop desde el inicio." },
+    { title: "Operación integrada", desc: "Mercado Pago, Stripe, PayPal y métodos locales según tu país." },
+    { title: "Expansión lista", desc: "Multi-idioma, multi-moneda e integraciones avanzadas si tu negocio lo requiere." },
   ];
 
   const EXTRAS: Extra[] = [
@@ -417,25 +417,26 @@ export default function Page() {
           <div className="mx-auto max-w-2xl px-6 lg:max-w-[var(--container)] lg:px-8">
             <div className="pb-16 sm:pb-32">
               <p className="hero-in text-xs sm:text-sm font-semibold tracking-wide" style={{ color: "var(--accent-warm)" }}>
-                DESARROLLO ECOMMERCE PARA PYMES
+                ECOMMERCE PARA LA SIGUIENTE ETAPA
               </p>
 
               <h1 className="hero-in delay-1 mt-4 text-4xl sm:text-6xl font-semibold tracking-tight" style={{ color: "#fff" }}>
-                Tu tienda online lista para vender.
+                Tu negocio funciona, 
+                <br />ahora necesita su propia tienda.
               </h1>
 
               <p className="hero-in delay-2 mt-5 max-w-xl text-base sm:text-lg leading-relaxed" style={{ color: "rgba(255,255,255,0.72)" }}>
-                La armamos en <span style={{ color: "#fff", fontWeight: 600 }}>10–15 días hábiles</span>, con pagos y envíos configurados,
-                diseño alineado a tu marca y guía para gestionarla sin depender de terceros.
+                Diseñamos y desarrollamos tu ecommerce como una extensión natural de tu marca.
+Profesional, sólida y preparada para escalar.
               </p>
 
               <div className="hero-in delay-3 mt-8 flex flex-wrap gap-3">
-                <PrimaryButton href="#contacto">Quiero mi tienda</PrimaryButton>
-                <SecondaryButton href="#incluye">Ver qué incluye</SecondaryButton>
+                <PrimaryButton href="#contacto">Evaluar mi proyecto</PrimaryButton>
+                <SecondaryButton href="#incluye">Ver cómo trabajamos</SecondaryButton>
               </div>
 
               <p className="mt-8 text-xs" style={{ color: "rgba(255,255,255,0.55)" }}>
-                *Los tiempos dependen del alcance y de que tengamos materiales (logo, textos, catálogo) a tiempo.
+                *Proyectos trabajados según etapa y proyección.
               </p>
             </div>
           </div>
@@ -446,23 +447,23 @@ export default function Page() {
       <section className="py-12 sm:py-14">
         <div className="mx-auto max-w-2xl px-6 lg:max-w-[var(--container)] lg:px-8">
           <SectionHeader
-            eyebrow="Esto suele pasar"
-            title="Vender por Instagram funciona… hasta que te empieza a consumir."
-            desc="Cuando el canal crece, el caos también. Una tienda ordena la demanda, automatiza pagos y te devuelve tiempo."
+            eyebrow="Cuando el negocio crece"
+            title="Llega el momento de decidir cómo querés crecer."
+            desc="No se trata de vender más por el mismo camino. Se trata de construir la estructura que acompaña la idea."
             align="left"
           />
           <div className="mt-8 grid gap-4 sm:grid-cols-2">
-            <Card title="Se pierden ventas por demoras">
-              Respondés tarde, se enfría el interés y terminás cerrando menos de lo que podrías.
+            <Card title="Profesionalización real">
+              Tu negocio deja de parecer un emprendimiento y empieza a sentirse como una marca consolidada.
             </Card>
-            <Card title="Cobrar y coordinar es un trabajo aparte">
-              Transferencias, comprobantes, envíos… todo manual. Te saca foco y energía.
+            <Card title="Infraestructura propia">
+              Una forma de vender que no depende de terceros y que responde a tu estrategia.
             </Card>
-            <Card title="No hay claridad real de lo que pasa">
-              Sin métricas, es difícil saber qué producto empuja, qué frena y dónde mejorar.
+            <Card title="Escala con criterio">
+              Promociones, campañas y expansión con base sólida, no improvisación.
             </Card>
-            <Card title="Lo técnico te frena">
-              No querés “aprender sistemas”. Querés que funcione, que sea simple y administrable.
+            <Card title="Decisiones informadas">
+              Datos claros para crecer con intención, no por intuición.
             </Card>
           </div>
         </div>
@@ -472,9 +473,9 @@ export default function Page() {
       <section id="incluye" className="py-12 sm:py-14">
         <div className="mx-auto max-w-2xl px-6 lg:max-w-[var(--container)] lg:px-8">
           <SectionHeader
-            eyebrow="Qué vas a recibir"
-            title="Una tienda lista para operar, con base sólida."
-            desc="Lo esencial para empezar a vender bien desde el día 1, sin parches."
+            eyebrow="Construimos contigo"
+            title="Una estructura digital preparada para crecer."
+            desc="No es solo una tienda. Es el canal que acompaña la etapa en la que ya estás."
           />
           <div className="mt-8 grid gap-4 sm:grid-cols-2">
             <div className="rounded-3xl p-7 sm:p-8" style={{ background: "var(--card)", border: "1px solid var(--border)", boxShadow: PREMIUM_CARD_SHADOW }}>
@@ -482,26 +483,26 @@ export default function Page() {
                 Incluye
               </h3>
               <ul className="mt-4 grid gap-3">
-                <ChecklistItem>Estructura completa (home, catálogo, producto, carrito, contacto)</ChecklistItem>
-                <ChecklistItem>Diseño alineado a tu marca (tipografía, colores, estética)</ChecklistItem>
-                <ChecklistItem>Configuración de pagos y métodos de envío</ChecklistItem>
-                <ChecklistItem>Políticas básicas (envíos, cambios, privacidad)</ChecklistItem>
-                <ChecklistItem>SEO base y performance razonable</ChecklistItem>
+                <ChecklistItem>Arquitectura completa pensada para conversión</ChecklistItem>
+                <ChecklistItem>Diseño alineado a tu identidad y posicionamiento</ChecklistItem>
+                <ChecklistItem>Pagos y envíos configurados estratégicamente</ChecklistItem>
+                <ChecklistItem>Políticas y estructura legal básica</ChecklistItem>
+                <ChecklistItem>SEO técnico inicial y performance optimizada</ChecklistItem>
               </ul>
             </div>
 
             <div className="rounded-3xl p-7 sm:p-8" style={{ background: "var(--card)", border: "1px solid var(--border)", boxShadow: PREMIUM_CARD_SHADOW }}>
               <h3 className="text-lg font-semibold" style={{ color: "var(--text)" }}>
-                Opcional según plan
+                Escalable según el caso
               </h3>
               <ul className="mt-4 grid gap-3">
-                <ChecklistItem>Carga inicial de productos (cantidad definida)</ChecklistItem>
-                <ChecklistItem>Integraciones extra (apps específicas, tracking, etc.)</ChecklistItem>
-                <ChecklistItem>Multi-idioma / multimoneda</ChecklistItem>
-                <ChecklistItem>Automatizaciones (emails, carritos abandonados)</ChecklistItem>
+                <ChecklistItem>Carga inicial y organización avanzada de catálogo</ChecklistItem>
+                <ChecklistItem>Integraciones específicas (tracking, ERP, apps clave)</ChecklistItem>
+                <ChecklistItem>Multi-idioma / multi-moneda</ChecklistItem>
+                <ChecklistItem>Automatizaciones y flujos de retención</ChecklistItem>
               </ul>
               <div className="mt-6">
-                <PrimaryButton href="#contacto">Cotizar mi caso</PrimaryButton>
+                <PrimaryButton href="#contacto">Cotizar</PrimaryButton>
               </div>
             </div>
           </div>
@@ -511,7 +512,7 @@ export default function Page() {
       {/* BENEFICIOS */}
       <section className="py-12 sm:py-14">
         <div className="mx-auto max-w-2xl px-6 lg:max-w-[var(--container)] lg:px-8">
-          <SectionHeader eyebrow="Por qué esto funciona" title="Beneficios claros, sin vueltas." desc="Una tienda que ordena, automatiza y te da control." />
+          <SectionHeader eyebrow="Por qué Interact" title="Una propuesta clara. Sin fricción innecesaria." desc="Un servicio diseñado para negocios que venden y buscan crecer con criterio." />
           <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {BENEFITS.map((b) => (
               <Card key={b.title} title={b.title}>
