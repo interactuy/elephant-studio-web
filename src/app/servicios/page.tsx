@@ -15,7 +15,7 @@ const SERVICES: Service[] = [
     title: "Desarrollo eCommerce",
     desc:
       "Diseñamos tiendas online rápidas y claras, pensadas para convertir desde el primer día. UX, performance y checkout sin fricción, con una arquitectura limpia y escalable para vender mejor y crecer con orden.",
-    href: "/contacto",
+    href: "/servicios/desarrollo-ecommerce",
     ui: "checkout",
   },
   {

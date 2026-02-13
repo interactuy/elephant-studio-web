@@ -267,10 +267,10 @@ export default function Page() {
   ];
 
   const EXTRAS: Extra[] = [
-    { title: "Capacitaciones", desc: "Guía + sesión práctica para manejar tu tienda con confianza." },
-    { title: "Soporte técnico", desc: "Si aparece cualquier problema, nos escribís y lo resolvemos rápido." },
-    { title: "Tips y consejos", desc: "Mejoras sugeridas: catálogo, UX, checkout y conversiones." },
-    { title: "Seguimiento", desc: "Monitoreo básico para detectar fallas o errores que afecten la operación." },
+    { title: "Formación estratégica", desc: "Te explicamos cómo gestionar, pero también qué mirar y qué optimizar." },
+    { title: "Soporte directo", desc: "Si algo falla, respondemos. Sin tickets eternos ni procesos impersonales." },
+    { title: "Mejora continua", desc: "Sugerencias concretas sobre catálogo, conversión y experiencia." },
+    { title: "Seguimiento operativo", desc: "Revisiones periódicas para asegurar que todo funcione como debe." },
   ];
 
   // ✅ Cambiá las URLs por tus portadas (recomendado 4:5 / vertical suave)
@@ -294,20 +294,20 @@ export default function Page() {
 
   const FAQS: FAQ[] = [
     {
-      q: "¿Cuánto tiempo lleva?",
-      a: "Depende del alcance (catálogo, integraciones, contenidos). Habitualmente toma entre 10 y 15 días hábiles.",
+      q: "¿Cuánto tiempo lleva el desarrollo?",
+      a: "Depende del alcance y del material disponible, pero en la mayoría de los casos la tienda está lista en 10 a 15 días hábiles. Trabajamos con un proceso claro y definido para evitar demoras innecesarias.",
     },
     {
-      q: "¿Cómo puedo pagar?",
-      a: "Podés pagar por transferencia y/o plataformas como Mercado Pago, PayPal o Stripe según tu país y preferencia.",
+      q: "¿Cómo funciona la inversión y las formas de pago?",
+      a: "La inversión se define según el alcance del proyecto. Podés pagar por transferencia o mediante plataformas digitales, según tu país.",
     },
     {
-      q: "¿Puedo hacer cambios en mi tienda luego?",
-      a: "Sí. Te entregamos una tienda administrable y una guía para gestionar productos, precios y contenido sin depender de terceros.",
+      q: "¿Voy a poder gestionar la tienda por mi cuenta?",
+      a: "Sí. La tienda queda completamente administrable. Te entregamos una guía y una sesión de acompañamiento para que puedas manejar productos, contenidos y configuraciones con autonomía.",
     },
     {
-      q: "¿Qué incluye el desarrollo de mi tienda online?",
-      a: "Estructura completa, diseño alineado a tu marca, configuración de pagos/envíos, páginas clave y carga inicial según el plan.",
+      q: "¿Trabajan solo con nuevos negocios?",
+      a: "No. Trabajamos principalmente con marcas que ya están en funcionamiento y buscan profesionalizar o expandir su canal digital.",
     },
   ];
 
@@ -436,7 +436,7 @@ Profesional, sólida y preparada para escalar.
               </div>
 
               <p className="mt-8 text-xs" style={{ color: "rgba(255,255,255,0.55)" }}>
-                *Proyectos trabajados según etapa y proyección.
+                *Trabajamos con una cantidad limitada de proyectos para garantizar foco y calidad.
               </p>
             </div>
           </div>
@@ -512,7 +512,7 @@ Profesional, sólida y preparada para escalar.
       {/* BENEFICIOS */}
       <section className="py-12 sm:py-14">
         <div className="mx-auto max-w-2xl px-6 lg:max-w-[var(--container)] lg:px-8">
-          <SectionHeader eyebrow="Por qué Interact" title="Una propuesta clara. Sin fricción innecesaria." desc="Un servicio diseñado para negocios que venden y buscan crecer con criterio." />
+          <SectionHeader eyebrow="Por qué Interact" title="Una propuesta clara, sin fricción innecesaria." desc="Un servicio diseñado para negocios que venden y buscan crecer con criterio." />
           <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {BENEFITS.map((b) => (
               <Card key={b.title} title={b.title}>
@@ -526,12 +526,12 @@ Profesional, sólida y preparada para escalar.
       {/* PROCESO */}
       <section className="py-12 sm:py-14">
         <div className="mx-auto max-w-2xl px-6 lg:max-w-[var(--container)] lg:px-8">
-          <SectionHeader eyebrow="Cómo trabajamos" title="Un proceso simple, con entregables claros." desc="Definimos, armamos, revisamos y entregamos. Sin vueltas eternas." />
+          <SectionHeader eyebrow="Cómo trabajamos" title="Un proceso claro. Sin improvisaciones." desc="Definimos alcance, ejecutamos con método y entregamos una estructura lista para operar." />
           <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-            <Card title="1. Brief">Definimos objetivo, catálogo, referencias y alcance. Te pedimos lo indispensable.</Card>
-            <Card title="2. Diseño">Estructura + estética para que la tienda se sienta tu marca, no una plantilla genérica.</Card>
-            <Card title="3. Configuración">Pagos, envíos, políticas y ajustes finos. Todo listo para operar.</Card>
-            <Card title="4. Entrega">Revisión final, guía de uso y handoff. Te queda todo administrable.</Card>
+            <Card title="1. Definición estratégica">Objetivo, catálogo, alcance y referencias. Definimos lo necesario antes de empezar.</Card>
+            <Card title="2. Diseño y estructura">Estructura + identidad visual alineada a tu marca.</Card>
+            <Card title="3. Implementación técnica">Pagos, envíos, configuraciones y ajustes finos. Todo probado antes de entregar.</Card>
+            <Card title="4. Entrega y autonomía">Revisión final, guía de uso y handoff completo. La tienda queda en tus manos.</Card>
           </div>
         </div>
       </section>
@@ -540,9 +540,9 @@ Profesional, sólida y preparada para escalar.
       <section className="py-12 sm:py-14">
         <div className="mx-auto max-w-2xl px-6 lg:max-w-[var(--container)] lg:px-8">
           <SectionHeader
-            eyebrow="Casos de éxito"
-            title="Ejemplos reales de lo que construimos."
-            desc="Algunos proyectos donde ordenamos ventas, catálogo y operación digital."
+            eyebrow="Casos seleccionados"
+            title="Proyectos que acompañaron una nueva etapa."
+            desc="Negocios en funcionamiento que decidieron consolidar y escalar su canal digital."
             align="left"
           />
 
@@ -572,7 +572,7 @@ Profesional, sólida y preparada para escalar.
       {/* ADEMÁS */}
       <section className="py-12 sm:py-14">
         <div className="mx-auto max-w-2xl px-6 lg:max-w-[var(--container)] lg:px-8">
-          <SectionHeader eyebrow="Además" title="No quedás solo cuando la tienda está online." desc="Acompañamiento real para que puedas operar con confianza." />
+          <SectionHeader eyebrow="Después del lanzamiento" title="La tienda es el inicio, no el final." desc="Seguimos trabajando juntos para que el canal digital crezca con tu negocio." />
           <div className="mt-8 grid gap-4 sm:grid-cols-2">
             {EXTRAS.map((x) => (
               <Card key={x.title} title={x.title}>
@@ -583,7 +583,7 @@ Profesional, sólida y preparada para escalar.
         </div>
       </section>
 
-      {/* GARANTÍA (consistente + protagonista por jerarquía) */}
+      {/* GARANTÍA */}
 <section className="py-14 sm:py-16">
   <div className="mx-auto max-w-3xl px-6 lg:max-w-[var(--container)] lg:px-8">
     <div
@@ -598,23 +598,23 @@ Profesional, sólida y preparada para escalar.
     >
       <div className="mx-auto max-w-3xl text-center">
         <p className="text-sm font-medium" style={{ color: "var(--muted)" }}>
-          Como en todo, garantía Interact
+          Garantía Interact
         </p>
 
         <h3
           className="mt-3 text-3xl sm:text-4xl font-semibold tracking-tight"
           style={{ color: "var(--text)" }}
         >
-          Si no estás conforme, te devolvemos tu dinero.
+          Tu inversión está respaldada.
         </h3>
 
         <div className="mt-7 flex flex-col items-center gap-4">
-          <PrimaryButton href="#contacto">Hablar y arrancar</PrimaryButton>
+          <PrimaryButton href="#contacto">Comencemos</PrimaryButton>
 
           <p className="text-xs" style={{ color: "var(--muted)" }}>
-            Sujeto a{" "}
+            Ver {" "}
             <Link
-              href="/terminos"
+              href="/garantia-interact"
               className="relative inline-block group"
               style={{ color: "var(--text)" }}
             >
@@ -710,25 +710,25 @@ Profesional, sólida y preparada para escalar.
 
       <div className="relative">
         <h3 className="text-2xl sm:text-3xl font-semibold tracking-tight">
-          ¿Listo para vender con orden?
+          Si tu marca está lista, nosotros también.
         </h3>
 
         <p
           className="mt-3 max-w-xl text-sm sm:text-base leading-relaxed"
           style={{ color: "var(--cta-panel-muted)" }}
         >
-          Contame qué vendés y en qué país. Te respondemos con una propuesta clara y el plan más simple para tu caso.
+          Creamos ecommerce para negocios que ya venden y están listos para consolidar su crecimiento con una presencia digital profesional.
         </p>
 
         <div className="mt-7 flex flex-wrap gap-3">
-          <PrimaryButton href="https://wa.me/59895302393">Hablar por WhatsApp</PrimaryButton>
-          <SecondaryButton href="mailto:hola@interact.uy?subject=Tienda%20online%20en%2015%20d%C3%ADas">
-            Enviar email
+          <PrimaryButton href="https://wa.me/59895302393">Iniciar proyecto</PrimaryButton>
+          <SecondaryButton href="mailto:hola@interact.uy">
+            Hablar sobre mi caso
           </SecondaryButton>
         </div>
 
         <p className="mt-6 text-xs" style={{ color: "var(--cta-panel-muted)" }}>
-          *Tiempos estimados: 10–15 días hábiles según alcance y materiales entregados.
+          *Trabajamos con una cantidad limitada de proyectos para garantizar foco y calidad.
         </p>
       </div>
     </div>
