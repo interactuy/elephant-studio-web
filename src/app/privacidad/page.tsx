@@ -23,7 +23,7 @@ export default function PrivacidadPage() {
 
         <section className="mt-10 space-y-6 text-sm leading-7">
           <p>
-            En Elephant Studio valoramos la privacidad de quienes visitan nuestro
+            En Interact Studio valoramos la privacidad de quienes visitan nuestro
             sitio web. Esta política describe cómo recopilamos, utilizamos y
             protegemos la información personal que pueda ser proporcionada a
             través de este sitio.
@@ -60,7 +60,7 @@ export default function PrivacidadPage() {
             Compartir información con terceros
           </h2>
           <p>
-            Elephant Studio no vende, alquila ni comparte información personal
+            Interact Studio no vende, alquila ni comparte información personal
             con terceros, salvo cuando sea estrictamente necesario para cumplir
             con obligaciones legales o brindar un servicio solicitado por el
             usuario.
@@ -89,10 +89,10 @@ export default function PrivacidadPage() {
             Si tenés dudas sobre esta política o sobre el tratamiento de tus
             datos, podés escribirnos a{" "}
             <a
-              href="mailto:hola@elephant.studio"
+              href="mailto:hola@interact.com.uy"
               className="underline underline-offset-4"
             >
-              hola@elephant.studio
+              hola@interact.com.uy
             </a>
             .
           </p>

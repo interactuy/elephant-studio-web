@@ -31,7 +31,7 @@ export default function TerminosPage() {
           <h2 className="text-lg font-semibold">Uso del sitio</h2>
           <p>
             El contenido de este sitio tiene fines informativos y comerciales
-            relacionados con los servicios ofrecidos por Elephant Studio. El
+            relacionados con los servicios ofrecidos por Interact Studio. El
             usuario se compromete a utilizar el sitio de forma lícita y
             respetuosa.
           </p>
@@ -41,7 +41,7 @@ export default function TerminosPage() {
           </h2>
           <p>
             Todos los contenidos del sitio, incluyendo textos, diseños, marcas,
-            logotipos, imágenes y código, son propiedad de Elephant Studio o se
+            logotipos, imágenes y código, son propiedad de Interact Studio o se
             utilizan con la debida autorización. Queda prohibida su reproducción
             total o parcial sin consentimiento expreso.
           </p>
@@ -50,7 +50,7 @@ export default function TerminosPage() {
             Limitación de responsabilidad
           </h2>
           <p>
-            Elephant Studio no garantiza que el sitio funcione de manera
+            Interact Studio no garantiza que el sitio funcione de manera
             ininterrumpida o libre de errores. No nos responsabilizamos por daños
             directos o indirectos derivados del uso o imposibilidad de uso del
             sitio.
@@ -78,10 +78,10 @@ export default function TerminosPage() {
             Para cualquier consulta relacionada con estos términos, podés
             contactarnos a{" "}
             <a
-              href="mailto:hola@elephant.studio"
+              href="mailto:hola@interact.com.uy"
               className="underline underline-offset-4"
             >
-              hola@elephant.studio
+              hola@interact.com.uy
             </a>
             .
           </p>
